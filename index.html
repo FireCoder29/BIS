@@ -1,0 +1,1374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#25343b">
+  <title>Benchmark International School | Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <style>
+    :root {
+      --ink: #25343b;
+      --ink-2: #344850;
+      --teal: #438a98;
+      --teal-deep: #2e6f7b;
+      --sky: #e8f0f3;
+      --paper: #f8fafb;
+      --white: #fff;
+      --muted: #64737a;
+      --line: #dfe7ea;
+      --gold: #d7ad5b;
+      --shadow: 0 18px 45px rgba(34, 55, 63, .09)
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px
+    }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "DM Sans", Arial, sans-serif;
+      line-height: 1.65;
+      overflow-x: hidden
+    }
+
+    img {
+      max-width: 100%
+    }
+
+    a {
+      color: inherit
+    }
+
+    .container {
+      width: min(1160px, calc(100% - 40px))
+    }
+
+    .topline {
+      background: var(--ink);
+      color: #dce8eb;
+      font-size: .78rem;
+      letter-spacing: .035em;
+      padding: 7px 0
+    }
+
+    .topline-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: center
+    }
+
+    .site-nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, .96);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(37, 52, 59, .09)
+    }
+
+    .nav-inner {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      gap: 24px
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      text-decoration: none;
+      min-width: 0
+    }
+
+    .brand img {
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
+      flex: none
+    }
+
+    .brand-name {
+      font-family: Manrope, sans-serif;
+      font-weight: 800;
+      font-size: 1rem;
+      line-height: 1.2;
+      letter-spacing: -.025em
+    }
+
+    .brand-name small {
+      display: block;
+      color: var(--teal-deep);
+      font-family: "DM Sans", sans-serif;
+      font-size: .68rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-top: 4px
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-left: auto
+    }
+
+    .nav-links a {
+      font-size: .9rem;
+      font-weight: 700;
+      text-decoration: none;
+      color: #4c5a60;
+      padding: 10px 13px;
+      border-radius: 8px;
+      transition: .2s
+    }
+
+    .nav-links a:hover,
+    .nav-links a[aria-current=page] {
+      color: var(--teal-deep);
+      background: var(--sky)
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 9px
+    }
+
+    .search-form {
+      display: flex;
+      gap: 6px
+    }
+
+    .search-form input {
+      width: 125px;
+      min-width: 0;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 8px 10px;
+      font: inherit;
+      font-size: .83rem
+    }
+
+    .search-form button {
+      border: 0;
+      background: transparent;
+      color: var(--teal-deep);
+      font-weight: 700;
+      font-size: .85rem
+    }
+
+    .nav-toggle {
+      display: none;
+      border: 1px solid var(--line);
+      background: #fff;
+      border-radius: 9px;
+      padding: 8px 11px;
+      color: var(--ink);
+      font-size: 1.2rem
+    }
+
+    .hero {
+      padding: 44px 0 64px;
+      background: linear-gradient(135deg, #edf4f6 0%, #f8fafb 60%, #e5eff1 100%);
+      position: relative;
+      isolation: isolate
+    }
+
+    .hero:before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      width: 360px;
+      height: 360px;
+      border: 1px solid rgba(67, 138, 152, .18);
+      border-radius: 50%;
+      right: -150px;
+      top: -160px;
+      box-shadow: 0 0 0 35px rgba(67, 138, 152, .035), 0 0 0 75px rgba(67, 138, 152, .025)
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr);
+      align-items: center;
+      gap: clamp(28px, 5vw, 68px)
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      color: var(--teal-deep);
+      font-size: .76rem;
+      font-weight: 800;
+      letter-spacing: .15em;
+      text-transform: uppercase
+    }
+
+    .eyebrow:before {
+      content: "";
+      height: 2px;
+      width: 27px;
+      background: var(--gold)
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-family: Manrope, Arial, sans-serif;
+      letter-spacing: -.035em
+    }
+
+    .hero h1 {
+      font-size: clamp(2.25rem, 4.3vw, 4.2rem);
+      font-weight: 800;
+      line-height: 1.08;
+      margin: 18px 0 20px;
+      max-width: 620px
+    }
+
+    .hero h1 span {
+      color: var(--teal-deep)
+    }
+
+    .hero-copy {
+      font-size: clamp(1rem, 1.2vw, 1.1rem);
+      color: #56666d;
+      max-width: 540px;
+      margin: 0 0 28px
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px
+    }
+
+    .btn-main,
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 12px 19px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: .9rem;
+      transition: transform .2s, box-shadow .2s
+    }
+
+    .btn-main {
+      background: var(--teal-deep);
+      color: white;
+      border: 1px solid var(--teal-deep);
+      box-shadow: 0 7px 16px rgba(46, 111, 123, .18)
+    }
+
+    .btn-outline {
+      background: rgba(255, 255, 255, .65);
+      color: var(--ink);
+      border: 1px solid #cbd8dc
+    }
+
+    .btn-main:hover,
+    .btn-outline:hover {
+      transform: translateY(-2px);
+      color: inherit
+    }
+
+    .btn-main:hover {
+      color: #fff;
+      background: #245c67
+    }
+
+    .hero-visual {
+      position: relative;
+      min-width: 0
+    }
+
+    .hero-logo-panel {
+      min-height: 340px;
+      display: grid;
+      place-items: center;
+      background: #fff;
+      border: 1px solid rgba(37, 52, 59, .08);
+      border-radius: 22px;
+      padding: clamp(20px, 4vw, 45px);
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden
+    }
+
+    .hero-logo-panel:before {
+      content: "";
+      position: absolute;
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      background: #edf5f6;
+      top: -100px;
+      right: -75px
+    }
+
+    .hero-logo-panel:after {
+      content: "";
+      position: absolute;
+      width: 180px;
+      height: 180px;
+      border: 1px solid rgba(67, 138, 152, .2);
+      border-radius: 50%;
+      bottom: -100px;
+      left: -60px
+    }
+
+    .hero-logo-panel img {
+      position: relative;
+      z-index: 1;
+      width: min(100%, 360px);
+      max-height: 300px;
+      height: auto;
+      object-fit: contain
+    }
+
+    .hero-caption {
+      position: absolute;
+      bottom: -20px;
+      left: clamp(10px, 3vw, 34px);
+      right: clamp(10px, 3vw, 34px);
+      background: var(--ink);
+      color: white;
+      border-radius: 12px;
+      padding: 15px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      box-shadow: 0 12px 24px rgba(37, 52, 59, .18)
+    }
+
+    .hero-caption strong {
+      font-family: Manrope, sans-serif;
+      font-size: .96rem
+    }
+
+    .hero-caption span {
+      font-size: .77rem;
+      color: #c8d7db;
+      text-align: right
+    }
+
+    .welcome-strip {
+      margin-top: -1px;
+      background: var(--ink);
+      color: #fff;
+      padding: 18px 0
+    }
+
+    .welcome-strip .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 22px
+    }
+
+    .welcome-strip p {
+      margin: 0;
+      color: #d4e0e3;
+      font-size: .91rem
+    }
+
+    .welcome-strip strong {
+      font-family: Manrope, sans-serif;
+      font-size: 1rem
+    }
+
+    .section {
+      padding: 78px 0
+    }
+
+    .section-soft {
+      background: #eef4f6
+    }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 25px;
+      margin-bottom: 30px
+    }
+
+    .section-head h2 {
+      font-size: clamp(1.8rem, 3vw, 2.6rem);
+      font-weight: 800;
+      margin: 8px 0 0
+    }
+
+    .section-head p {
+      max-width: 480px;
+      color: var(--muted);
+      margin: 0
+    }
+
+    .text-link {
+      color: var(--teal-deep);
+      font-weight: 800;
+      text-decoration: none;
+      white-space: nowrap
+    }
+
+    .text-link:hover {
+      text-decoration: underline;
+      text-underline-offset: 4px
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: clamp(28px, 5vw, 64px);
+      align-items: center
+    }
+
+    .intro-image {
+      background: #fff;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      padding: 12px;
+      box-shadow: var(--shadow)
+    }
+
+    .intro-image img {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: 440px;
+      object-fit: contain;
+      border-radius: 10px
+    }
+
+    .intro-copy h2 {
+      font-size: clamp(1.8rem, 3vw, 2.55rem);
+      font-weight: 800;
+      line-height: 1.2;
+      margin: 10px 0 18px
+    }
+
+    .intro-copy p {
+      color: var(--muted);
+      margin-bottom: 22px
+    }
+
+    .principal-card {
+      display: grid;
+      grid-template-columns: 190px minmax(0, 1fr);
+      gap: 28px;
+      align-items: center;
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: clamp(22px, 4vw, 40px);
+      box-shadow: var(--shadow)
+    }
+
+    .principal-photo {
+      background: var(--sky);
+      border-radius: 14px;
+      padding: 10px;
+      display: grid;
+      place-items: center
+    }
+
+    .principal-photo img {
+      width: 100%;
+      height: auto;
+      max-height: 230px;
+      object-fit: contain;
+      border-radius: 9px
+    }
+
+    .quote-mark {
+      color: var(--gold);
+      font-size: 3rem;
+      font-family: Georgia, serif;
+      line-height: .8
+    }
+
+    .principal-card blockquote {
+      font-family: Manrope, sans-serif;
+      font-size: clamp(1.05rem, 1.7vw, 1.4rem);
+      line-height: 1.55;
+      font-weight: 600;
+      margin: 12px 0 18px
+    }
+
+    .principal-name {
+      font-weight: 800;
+      margin: 0
+    }
+
+    .principal-role {
+      color: var(--muted);
+      font-size: .9rem;
+      margin: 2px 0 0
+    }
+
+    .benefit-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px
+    }
+
+    .benefit {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 13px;
+      padding: 23px 20px;
+      min-height: 185px;
+      transition: transform .2s, box-shadow .2s
+    }
+
+    .benefit:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow)
+    }
+
+    .benefit-number {
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      border-radius: 10px;
+      background: var(--sky);
+      color: var(--teal-deep);
+      font-weight: 800;
+      font-size: .83rem;
+      margin-bottom: 18px
+    }
+
+    .benefit h3 {
+      font-size: 1.04rem;
+      font-weight: 800;
+      margin-bottom: 8px
+    }
+
+    .benefit p {
+      color: var(--muted);
+      font-size: .9rem;
+      margin: 0
+    }
+
+    .admission-band {
+      background: var(--teal-deep);
+      color: #fff;
+      border-radius: 20px;
+      padding: clamp(26px, 5vw, 52px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+      position: relative;
+      overflow: hidden
+    }
+
+    .admission-band:after {
+      content: "";
+      position: absolute;
+      width: 250px;
+      height: 250px;
+      border: 1px solid rgba(255, 255, 255, .17);
+      border-radius: 50%;
+      right: 15%;
+      top: -170px;
+      box-shadow: 0 0 0 28px rgba(255, 255, 255, .035), 0 0 0 58px rgba(255, 255, 255, .025)
+    }
+
+    .admission-band>div,
+    .admission-band>a {
+      position: relative;
+      z-index: 1
+    }
+
+    .admission-band h2 {
+      font-size: clamp(1.7rem, 3vw, 2.5rem);
+      font-weight: 800;
+      margin: 0 0 10px
+    }
+
+    .admission-band p {
+      color: #e0eff1;
+      max-width: 650px;
+      margin: 0
+    }
+
+    .admission-band .btn {
+      background: white;
+      color: var(--teal-deep);
+      font-weight: 800;
+      border: 0;
+      padding: 13px 19px;
+      white-space: nowrap
+    }
+
+    .notice-card {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 22px 24px
+    }
+
+    .notice-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: var(--sky);
+      color: var(--teal-deep);
+      display: grid;
+      place-items: center;
+      font-size: 1.35rem;
+      flex: none
+    }
+
+    .notice-card h3 {
+      font-size: 1rem;
+      font-weight: 800;
+      margin: 0 0 4px
+    }
+
+    .notice-card p {
+      color: var(--muted);
+      margin: 0;
+      font-size: .91rem
+    }
+
+    .management-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px
+    }
+
+    .manager {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 13px;
+      padding: 18px;
+      text-align: center;
+      min-width: 0
+    }
+
+    .manager img {
+      display: block;
+      width: 100%;
+      height: 190px;
+      object-fit: contain;
+      object-position: center;
+      background: #f2f6f7;
+      border-radius: 9px;
+      margin-bottom: 15px
+    }
+
+    .manager h3 {
+      font-size: .98rem;
+      font-weight: 800;
+      margin: 0 0 4px
+    }
+
+    .manager p {
+      font-size: .85rem;
+      color: var(--muted);
+      margin: 0
+    }
+
+    footer {
+      background: var(--ink);
+      color: #fff;
+      padding: 28px 0
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px
+    }
+
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      font-weight: 800
+    }
+
+    .footer-brand img {
+      width: 38px;
+      height: 38px;
+      object-fit: contain
+    }
+
+    .footer-inner p {
+      color: #c8d6da;
+      font-size: .82rem;
+      margin: 0
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap
+    }
+
+    .footer-links a {
+      color: #e0eaed;
+      font-size: .86rem;
+      text-decoration: none
+    }
+
+    .footer-links a:hover {
+      text-decoration: underline
+    }
+
+    .search-result {
+      outline: 3px solid var(--gold);
+      outline-offset: 5px;
+      border-radius: 8px
+    }
+
+    /* Footer */
+    .site-footer {
+      background: #102a43;
+      color: #ffffff;
+      padding: 50px 7% 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .footer-container {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1.2fr;
+      gap: 40px;
+      padding-bottom: 35px;
+    }
+
+    .site-footer h2 {
+      font-size: 22px;
+      margin: 0 0 14px;
+    }
+
+    .site-footer h3 {
+      font-size: 17px;
+      margin: 0 0 18px;
+      color: #55d6c2;
+    }
+
+    .site-footer h4 {
+      font-size: 15px;
+      margin: 12px 0 6px;
+    }
+
+    .footer-brand p,
+    .branch p {
+      color: #cbd5e1;
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .footer-links a,
+    .branch a {
+      color: #e2e8f0;
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.3s ease;
+    }
+
+    .footer-links a:hover,
+    .branch a:hover {
+      color: #55d6c2;
+    }
+
+    .branch {
+      margin-bottom: 18px;
+    }
+
+    .branch a {
+      display: inline-block;
+      margin-top: 5px;
+      color: #55d6c2;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #334e68;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    .footer-bottom p {
+      color: #cbd5e1;
+      font-size: 13px;
+      margin: 0;
+    }
+
+    /* Responsive Footer */
+    @media (max-width: 768px) {
+      .footer-container {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .site-footer {
+        padding: 35px 6% 0;
+      }
+    }
+
+    @media(max-width:1000px) {
+      .nav-inner {
+        min-height: 70px;
+        gap: 14px
+      }
+
+      .search-form input {
+        width: 105px
+      }
+
+      .nav-links a {
+        padding: 9px
+      }
+
+      .hero-grid {
+        gap: 28px
+      }
+
+      .hero-logo-panel {
+        min-height: 300px
+      }
+
+      .benefit-grid,
+      .management-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr))
+      }
+    }
+
+    @media(max-width:780px) {
+      .topline-inner {
+        justify-content: center;
+        text-align: center
+      }
+
+      .topline-inner span:last-child {
+        display: none
+      }
+
+      .nav-inner {
+        min-height: 68px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-top: 8px;
+        padding-bottom: 8px
+      }
+
+      .nav-toggle {
+        display: block
+      }
+
+      .nav-links {
+        display: none;
+        order: 3;
+        flex-basis: 100%;
+        margin: 0;
+        align-items: stretch;
+        flex-direction: column;
+        padding: 4px 0 8px
+      }
+
+      .nav-links.open {
+        display: flex
+      }
+
+      .nav-links a {
+        padding: 11px 12px
+      }
+
+      .nav-actions {
+        display: none;
+        order: 4;
+        flex-basis: 100%;
+        padding-bottom: 10px
+      }
+
+      .nav-actions.open {
+        display: flex
+      }
+
+      .search-form {
+        width: 100%
+      }
+
+      .search-form input {
+        width: 100%;
+        flex: 1
+      }
+
+      .hero {
+        padding: 35px 0 54px
+      }
+
+      .hero-grid,
+      .intro-grid {
+        grid-template-columns: 1fr
+      }
+
+      .hero-copy {
+        max-width: 650px
+      }
+
+      .hero-visual {
+        width: min(100%, 620px);
+        margin: 0 auto 14px
+      }
+
+      .hero-logo-panel {
+        min-height: 250px
+      }
+
+      .hero-logo-panel img {
+        max-height: 250px
+      }
+
+      .welcome-strip .container {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 5px
+      }
+
+      .section {
+        padding: 56px 0
+      }
+
+      .section-head {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px
+      }
+
+      .intro-image {
+        order: 2
+      }
+
+      .principal-card {
+        grid-template-columns: 145px minmax(0, 1fr);
+        gap: 20px
+      }
+
+      .admission-band {
+        align-items: flex-start;
+        flex-direction: column
+      }
+
+      .admission-band .btn {
+        white-space: normal
+      }
+
+      .footer-inner {
+        align-items: flex-start;
+        flex-direction: column
+      }
+    }
+
+    @media(max-width:480px) {
+      .container {
+        width: calc(100% - 28px)
+      }
+
+      .brand img {
+        width: 40px;
+        height: 40px
+      }
+
+      .brand-name {
+        font-size: .88rem
+      }
+
+      .brand-name small {
+        font-size: .6rem
+      }
+
+      .hero h1 {
+        font-size: 2.35rem
+      }
+
+      .hero-logo-panel {
+        min-height: 220px;
+        padding: 22px
+      }
+
+      .hero-caption {
+        left: 8px;
+        right: 8px;
+        bottom: -18px;
+        padding: 12px
+      }
+
+      .hero-caption strong {
+        font-size: .85rem
+      }
+
+      .hero-caption span {
+        font-size: .69rem
+      }
+
+      .section {
+        padding: 45px 0
+      }
+
+      .principal-card {
+        grid-template-columns: 1fr
+      }
+
+      .principal-photo {
+        max-width: 190px;
+        margin: 0 auto;
+        width: 100%
+      }
+
+      .benefit-grid,
+      .management-grid {
+        grid-template-columns: 1fr
+      }
+
+      .benefit {
+        min-height: 0
+      }
+
+      .manager img {
+        height: 210px
+      }
+
+      .notice-card {
+        align-items: flex-start;
+        padding: 18px
+      }
+
+      .footer-links {
+        gap: 12px
+      }
+
+      .admission-band {
+        padding: 25px 20px
+      }
+    }
+
+    @media(prefers-reduced-motion:reduce) {
+
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+        animation: none !important
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="topline">
+    <div class="container topline-inner"><span>Benchmark International School · Tongi, Gazipur</span><span>Quality
+        education · Character · Leadership</span></div>
+  </div>
+  <header class="site-nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html" aria-label="Benchmark International School home">
+        <img src="images/lol-removebg-preview-removebg-preview.png" alt="Benchmark International School logo">
+        <span class="brand-name">Benchmark International School<small>Learn · Grow · Lead</small></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false"
+        aria-controls="primary-nav">☰</button>
+      <nav class="nav-links" id="primary-nav" aria-label="Main navigation">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="about.html">About</a>
+        <a href="#management">School Management</a>
+        <a href="li1.html">🚧 Under Development...</a>
+      </nav>
+      <div class="nav-actions">
+        <form class="search-form" id="site-search" role="search">
+          <input id="search-input" type="search" placeholder="Search Here" aria-label="Search this page">
+          <button type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <span class="eyebrow">A place to learn and grow</span>
+          <h1>Welcome to <span>Benchmark</span> International School</h1>
+          <p class="hero-copy">Benchmark International School is a modern educational institution located in Tongi,
+            Gazipur. The school focuses on academic excellence, character building, and leadership development through
+            quality education and innovative teaching methods.</p>
+          <div class="button-row">
+            <a class="btn-main" href="about.html">Discover Our School <span aria-hidden="true">↗</span></a>
+            <a class="btn-outline" href="admission.html">Apply for Admission</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-logo-panel"><img src="images/mm-removebg-preview.png"
+              alt="Benchmark International School emblem"></div>
+          <div class="hero-caption"><strong>Benchmark International School</strong><span>Tongi, Gazipur,
+              Bangladesh</span></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="welcome-strip">
+      <div class="container"><strong>Learning with purpose. Growing with confidence.</strong>
+        <p>Quality education and a supportive learning environment.</p>
+      </div>
+    </div>
+
+    <section class="section" id="welcome">
+      <div class="container intro-grid">
+        <div class="intro-image"><img src="images/sliii-Picsart-AiImageEnhancer.jpg"
+            alt="Benchmark International School campus image"></div>
+        <div class="intro-copy">
+          <span class="eyebrow">Welcome to BIS</span>
+          <h2>A strong foundation for every learner.</h2>
+          <p>Benchmark International School is a modern educational institution located in Tongi, Gazipur. The school
+            focuses on academic excellence, character building, and leadership development through quality education and
+            innovative teaching methods.</p>
+          <a class="text-link" href="about.html">Read more about our school <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="principal">
+      <div class="container">
+        <div class="section-head">
+          <div><span class="eyebrow">A message from our leadership</span>
+            <h2>Principal's Message</h2>
+          </div>
+        </div>
+        <div class="principal-card">
+          <div class="principal-photo"><img src="images/prin.jpg" alt="Md. Zahirul Islam, Principal"></div>
+          <div>
+            <div class="quote-mark" aria-hidden="true">“</div>
+            <blockquote>Education is not only about academic success but also about developing good character and
+              responsible citizenship. At Benchmark International School we aim to inspire students to achieve their
+              full potential.</blockquote>
+            <p class="principal-name">Md. Zahirul Islam</p>
+            <p class="principal-role">Principal, BIS</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="why-us">
+      <div class="container">
+        <div class="section-head">
+          <div><span class="eyebrow">Why Benchmark</span>
+            <h2>Why Choose Our School</h2>
+          </div>
+        </div>
+        <div class="benefit-grid">
+          <article class="benefit">
+            <div class="benefit-number">01</div>
+            <h3>Quality Education</h3>
+            <p>Modern curriculum and effective teaching methods.</p>
+          </article>
+          <article class="benefit">
+            <div class="benefit-number">02</div>
+            <h3>Expert Teachers</h3>
+            <p>Highly qualified and experienced teachers.</p>
+          </article>
+          <article class="benefit">
+            <div class="benefit-number">03</div>
+            <h3>Modern Campus</h3>
+            <p>Safe and comfortable learning environment.</p>
+          </article>
+          <article class="benefit">
+            <div class="benefit-number">04</div>
+            <h3>Excellent Results</h3>
+            <p>Outstanding academic achievements.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="admission">
+      <div class="container">
+        <div class="admission-band">
+          <div><span class="eyebrow" style="color:#f5dca7">Admission Open</span>
+            <h2>Take the next step with BIS.</h2>
+            <p>Benchmark International School is now accepting applications for the new academic session. Join our
+              institution to experience quality education, modern teaching methods, and a supportive learning
+              environment.</p>
+          </div>
+          <a class="btn" href="admission.html">Apply for Admission <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="notice">
+      <div class="container">
+        <div class="section-head">
+          <div><span class="eyebrow">Stay informed</span>
+            <h2>Latest Notice</h2>
+          </div>
+        </div>
+        <div class="notice-card">
+          <div class="notice-icon" aria-hidden="true">▤</div>
+          <div>
+            <h3>Notice Board</h3>
+            <p>No notice yet. Please check again later for updates.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="management">
+      <div class="container">
+        <div class="section-head">
+          <div><span class="eyebrow">Our leadership</span>
+            <h2>School Management</h2>
+          </div>
+        </div>
+        <div class="management-grid">
+          <article class="manager"><img src="images/chei.jpg" alt="Md. Kamruzzaman Jhontu">
+            <h3>Md. Kamruzzaman Jhontu</h3>
+            <p>CEO</p>
+          </article>
+          <article class="manager"><img src="images/cha.jpg" alt="Md. Zillur Rahman">
+            <h3>Md. Zillur Rahman</h3>
+            <p>Chairman</p>
+          </article>
+          <article class="manager"><img src="images/prin.jpg" alt="Md. Zahirul Islam">
+            <h3>Md. Zahirul Islam</h3>
+            <p>Principal</p>
+          </article>
+          <article class="manager"><img src="images/vise.jpg" alt="Sheikh Shamim Ashraf">
+            <h3>Sheikh Shamim Ashraf</h3>
+            <p>Vice Principal</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+
+      <!-- School Information -->
+      <div class="footer-brand">
+        <img src="images/lol-removebg-preview-removebg-preview.png" alt="Benchmark International School logo" style="width: 100px; height: 100px;">
+        <br>
+        <!-- <h2>Benchmark International School</h2> -->
+        <p>Building knowledge, character, and a brighter future.</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="admission.html">Admission</a>
+        <a href="index.html#management">School Management</a>
+        <a href="index.html#notice">Notice Board</a>
+      </div>
+
+      <!-- Our Branches -->
+      <div class="footer-branches">
+        <h3>Our Branches</h3>
+
+        <div class="branch">
+          <h4>Branch 1</h4>
+          <p>Enter the first branch address</p>
+          <a href="YOUR_FIRST_GOOGLE_MAPS_LINK" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-map-marker-alt"></i> Get Directions
+          </a>
+        </div>
+
+        <div class="branch">
+          <h4>Branch 2</h4>
+          <p>Enter the second branch address</p>
+          <a href="YOUR_SECOND_GOOGLE_MAPS_LINK" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-map-marker-alt"></i> Get Directions
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Copyright -->
+    <div class="footer-bottom">
+      <p>
+        &copy; <span id="footer-year"></span>
+        Benchmark International School. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("footer-year").textContent =
+      new Date().getFullYear();
+  </script>
+
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.nav-links');
+    const actions = document.querySelector('.nav-actions');
+    toggle.addEventListener('click', () => {
+      const open = toggle.getAttribute('aria-expanded') !== 'true';
+      toggle.setAttribute('aria-expanded', String(open));
+      nav.classList.toggle('open', open);
+      actions.classList.toggle('open', open);
+    });
+    document.querySelector('#site-search').addEventListener('submit', (event) => {
+      event.preventDefault();
+      const query = document.querySelector('#search-input').value.trim().toLowerCase();
+      document.querySelectorAll('.search-result').forEach(el => el.classList.remove('search-result'));
+      if (!query) return;
+      const candidates = [...document.querySelectorAll('main h1, main h2, main h3, main p, main blockquote')];
+      const match = candidates.find(el => el.textContent.toLowerCase().includes(query));
+      if (match) {
+        match.classList.add('search-result');
+        match.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'center' });
+      } else {
+        document.querySelector('#search-input').setCustomValidity('No matching text found on this page.');
+        document.querySelector('#search-input').reportValidity();
+        document.querySelector('#search-input').setCustomValidity('');
+      }
+    });
+  </script>
+</body>
+
+</html>
