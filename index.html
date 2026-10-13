@@ -1096,6 +1096,57 @@
         animation: none !important
       }
     }
+
+    /* Fix layout on phones in landscape orientation */
+    @media screen and (max-height: 500px) and (orientation: landscape) and (max-width: 950px) {
+
+      html,
+      body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: clip;
+      }
+
+      .site-nav {
+        height: auto;
+        min-height: 0;
+      }
+
+      .site-nav .container {
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .hero-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 20px;
+      }
+
+      .hero-content {
+        min-width: 0;
+        width: 100%;
+      }
+
+      .hero-content h1 {
+        max-width: 100%;
+        font-size: clamp(1.8rem, 5vw, 2.5rem);
+        line-height: 1.15;
+        overflow-wrap: break-word;
+      }
+
+      .hero-copy {
+        max-width: 100%;
+      }
+
+      .hero-visual {
+        display: none;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
   </style>
 </head>
 
@@ -1289,7 +1340,8 @@
 
       <!-- School Information -->
       <div class="footer-brand">
-        <img src="images/lol-removebg-preview-removebg-preview.png" alt="Benchmark International School logo" style="width: 100px; height: 100px;">
+        <img src="images/lol-removebg-preview-removebg-preview.png" alt="Benchmark International School logo"
+          style="width: 100px; height: 100px;">
         <br>
         <!-- <h2>Benchmark International School</h2> -->
         <p>Building knowledge, character, and a brighter future.</p>
@@ -1303,7 +1355,9 @@
         <a href="admission.html">Admission</a>
         <a href="index.html#management">School Management</a>
         <a href="index.html#notice">Notice Board</a>
+        <a href="contact.html">Contact Us</a>
       </div>
+
 
       <!-- Our Branches -->
       <div class="footer-branches">
@@ -1311,16 +1365,16 @@
 
         <div class="branch">
           <h4>Branch 1</h4>
-          <p>Enter the first branch address</p>
-          <a href="YOUR_FIRST_GOOGLE_MAPS_LINK" target="_blank" rel="noopener noreferrer">
+          <p>S.S. Academy Road, Auchpara, Tongi, Gazipur-1711</p>
+          <a href="https://www.google.com/maps/dir/23.9377211,90.4004897/Benchmark+International+School+-+Auchpara+Campus,+S.S+Academy+Road,+Tongi+1711/@23.9216063,90.3792322,6770m/data=!3m1!1e3!4m9!4m8!1m1!4e1!1m5!1m1!1s0x3755c59b35736413:0x391d2a1e7ad0b4b4!2m2!1d90.3953036!2d23.9100788?entry=ttu&g_ep=EgoyMDI2MTAwNy4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">
             <i class="fas fa-map-marker-alt"></i> Get Directions
           </a>
         </div>
 
         <div class="branch">
           <h4>Branch 2</h4>
-          <p>Enter the second branch address</p>
-          <a href="YOUR_SECOND_GOOGLE_MAPS_LINK" target="_blank" rel="noopener noreferrer">
+          <p>Bonomala Road, BIS Point, Dattapara, Tongi, Gazipur-1712</p>
+          <a href="https://www.google.com/maps/dir/23.9377211,90.4004897/Benchmark+International+School+-+Dattapara+Campus,+BIS+Point,+Bonomala+Rd,+Tongi+1712/@23.9235266,90.379109,6924m/data=!3m1!1e3!4m9!4m8!1m1!4e1!1m5!1m1!1s0x3755c5f7d2605a8b:0xe8723066744c72ca!2m2!1d90.4031693!2d23.9111391?entry=ttu&g_ep=EgoyMDI2MTAwNy4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">
             <i class="fas fa-map-marker-alt"></i> Get Directions
           </a>
         </div>
