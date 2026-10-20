@@ -1,31 +1,668 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#25343b">
-  <meta name="description" content="Contact Benchmark International School and find our Auchpara and Dattapara campuses in Tongi, Gazipur.">
+  <meta name="description"
+    content="Contact Benchmark International School and find our Auchpara and Dattapara campuses in Tongi, Gazipur.">
   <title>Contact Us | Benchmark International School</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
   <style>
-    :root{--ink:#25343b;--ink-2:#344850;--teal:#438a98;--teal-deep:#2e6f7b;--sky:#e8f0f3;--paper:#f8fafb;--white:#fff;--muted:#64737a;--line:#dfe7ea;--gold:#d7ad5b;--shadow:0 18px 45px rgba(34,55,63,.09)}
-    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:100px}body{margin:0;background:var(--paper);color:var(--ink);font-family:"DM Sans",Arial,sans-serif;line-height:1.65;overflow-x:clip}img{max-width:100%;display:block}a{color:inherit}.container{width:min(1160px,calc(100% - 40px));margin-inline:auto}h1,h2,h3{font-family:Manrope,Arial,sans-serif;letter-spacing:-.035em}button,input,textarea{font:inherit}
+    :root {
+      --ink: #25343b;
+      --ink-2: #344850;
+      --teal: #438a98;
+      --teal-deep: #2e6f7b;
+      --sky: #e8f0f3;
+      --paper: #f8fafb;
+      --white: #fff;
+      --muted: #64737a;
+      --line: #dfe7ea;
+      --gold: #d7ad5b;
+      --shadow: 0 18px 45px rgba(34, 55, 63, .09)
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px
+    }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "DM Sans", Arial, sans-serif;
+      line-height: 1.65;
+      overflow-x: clip
+    }
+
+    img {
+      max-width: 100%;
+      display: block
+    }
+
+    a {
+      color: inherit
+    }
+
+    .container {
+      width: min(1160px, calc(100% - 40px));
+      margin-inline: auto
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: Manrope, Arial, sans-serif;
+      letter-spacing: -.035em
+    }
+
+    button,
+    input,
+    textarea {
+      font: inherit
+    }
+
     /* Shared header: aligned to the main site template */
-    .topline{background:var(--ink);color:#dce8eb;font-size:.78rem;letter-spacing:.035em;padding:7px 0}.topline-inner{display:flex;justify-content:space-between;gap:12px;align-items:center}.site-nav{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.97);backdrop-filter:blur(14px);border-bottom:1px solid rgba(37,52,59,.09)}.nav-inner{min-height:78px;display:flex;align-items:center;gap:24px}.brand{display:flex;align-items:center;gap:11px;text-decoration:none;min-width:0;flex-shrink:0}.brand img{width:48px;height:48px;object-fit:contain;flex:none}.brand-name{font-family:Manrope,sans-serif;font-weight:800;font-size:1rem;line-height:1.2;letter-spacing:-.025em}.brand-name small{display:block;color:var(--teal-deep);font-family:"DM Sans",sans-serif;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;margin-top:4px}.nav-links{display:flex;align-items:center;gap:6px;margin-left:auto}.nav-links a{font-size:.9rem;font-weight:700;text-decoration:none;color:#4c5a60;padding:10px 13px;border-radius:8px;transition:background .2s,color .2s;white-space:nowrap}.nav-links a:hover,.nav-links a[aria-current="page"]{color:var(--teal-deep);background:var(--sky)}.nav-actions{display:flex;align-items:center;gap:9px}.search-form{display:flex;gap:6px}.search-form input{width:125px;min-width:0;border:1px solid var(--line);border-radius:8px;padding:8px 10px;font-size:.83rem;background:#fff}.search-form button{border:0;background:transparent;color:var(--teal-deep);font-weight:700;font-size:.85rem;cursor:pointer}.nav-toggle{display:none;border:1px solid var(--line);background:#fff;border-radius:9px;padding:8px 11px;color:var(--ink);font-size:1.2rem;cursor:pointer}
+    .topline {
+      background: var(--ink);
+      color: #dce8eb;
+      font-size: .78rem;
+      letter-spacing: .035em;
+      padding: 7px 0
+    }
+
+    .topline-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: center
+    }
+
+    .site-nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, .97);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(37, 52, 59, .09)
+    }
+
+    .nav-inner {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      gap: 24px
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      text-decoration: none;
+      min-width: 0;
+      flex-shrink: 0
+    }
+
+    .brand img {
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
+      flex: none
+    }
+
+    .brand-name {
+      font-family: Manrope, sans-serif;
+      font-weight: 800;
+      font-size: 1rem;
+      line-height: 1.2;
+      letter-spacing: -.025em
+    }
+
+    .brand-name small {
+      display: block;
+      color: var(--teal-deep);
+      font-family: "DM Sans", sans-serif;
+      font-size: .68rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-top: 4px
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-left: auto
+    }
+
+    .nav-links a {
+      font-size: .9rem;
+      font-weight: 700;
+      text-decoration: none;
+      color: #4c5a60;
+      padding: 10px 13px;
+      border-radius: 8px;
+      transition: background .2s, color .2s;
+      white-space: nowrap
+    }
+
+    .nav-links a:hover,
+    .nav-links a[aria-current="page"] {
+      color: var(--teal-deep);
+      background: var(--sky)
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 9px
+    }
+
+    .search-form {
+      display: flex;
+      gap: 6px
+    }
+
+    .search-form input {
+      width: 125px;
+      min-width: 0;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 8px 10px;
+      font-size: .83rem;
+      background: #fff
+    }
+
+    .search-form button {
+      border: 0;
+      background: transparent;
+      color: var(--teal-deep);
+      font-weight: 700;
+      font-size: .85rem;
+      cursor: pointer
+    }
+
+    .nav-toggle {
+      display: none;
+      border: 1px solid var(--line);
+      background: #fff;
+      border-radius: 9px;
+      padding: 8px 11px;
+      color: var(--ink);
+      font-size: 1.2rem;
+      cursor: pointer
+    }
+
     /* Contact page */
-    .page-hero{background:linear-gradient(135deg,#edf4f6 0%,#f8fafb 62%,#e5eff1 100%);padding:60px 0 58px;border-bottom:1px solid var(--line)}.eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--teal-deep);font-size:.76rem;font-weight:800;letter-spacing:.15em;text-transform:uppercase}.eyebrow:before{content:"";height:2px;width:27px;background:var(--gold)}.page-hero h1{font-size:clamp(2.25rem,5vw,3.8rem);font-weight:800;line-height:1.1;margin:15px 0 16px}.page-hero h1 span{color:var(--teal-deep)}.page-hero p{max-width:690px;color:var(--muted);font-size:1.05rem;margin:0}.section{padding:64px 0}.section-heading{margin-bottom:28px}.section-heading h2{font-size:clamp(1.65rem,3vw,2.35rem);font-weight:800;margin:8px 0}.section-heading p{color:var(--muted);margin:0;max-width:680px}.campus-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;align-items:stretch}.campus-card{background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;min-width:0}.campus-card-top{padding:25px 25px 18px}.campus-label{display:inline-block;background:var(--sky);color:var(--teal-deep);font-size:.74rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase;padding:6px 10px;border-radius:6px}.campus-card h3{font-size:1.35rem;font-weight:800;margin:13px 0 9px}.address{color:var(--muted);margin:0;overflow-wrap:anywhere}.map-frame{width:100%;height:270px;border:0;display:block;background:var(--sky)}.campus-actions{display:flex;gap:10px;flex-wrap:wrap;padding:18px 25px 24px;margin-top:auto}.map-button{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:11px 15px;border-radius:8px;text-decoration:none;font-size:.88rem;font-weight:800;transition:transform .2s,background .2s}.map-button:hover{transform:translateY(-2px)}.map-button.primary{background:var(--teal-deep);color:#fff}.map-button.secondary{border:1px solid var(--line);background:#fff;color:var(--ink)}.contact-note{background:var(--ink);color:#fff;border-radius:16px;padding:clamp(24px,4vw,38px);display:flex;justify-content:space-between;align-items:center;gap:24px}.contact-note h2{font-size:clamp(1.4rem,2.5vw,2rem);margin:0 0 8px;font-weight:800}.contact-note p{margin:0;color:#d4e0e3;max-width:720px}.contact-note .note-tag{flex:none;border:1px solid rgba(255,255,255,.28);border-radius:9px;padding:10px 13px;color:#f4dfb4;font-size:.82rem;font-weight:800;white-space:nowrap}
+    .page-hero {
+      background: linear-gradient(135deg, #edf4f6 0%, #f8fafb 62%, #e5eff1 100%);
+      padding: 60px 0 58px;
+      border-bottom: 1px solid var(--line)
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      color: var(--teal-deep);
+      font-size: .76rem;
+      font-weight: 800;
+      letter-spacing: .15em;
+      text-transform: uppercase
+    }
+
+    .eyebrow:before {
+      content: "";
+      height: 2px;
+      width: 27px;
+      background: var(--gold)
+    }
+
+    .page-hero h1 {
+      font-size: clamp(2.25rem, 5vw, 3.8rem);
+      font-weight: 800;
+      line-height: 1.1;
+      margin: 15px 0 16px
+    }
+
+    .page-hero h1 span {
+      color: var(--teal-deep)
+    }
+
+    .page-hero p {
+      max-width: 690px;
+      color: var(--muted);
+      font-size: 1.05rem;
+      margin: 0
+    }
+
+    .section {
+      padding: 64px 0
+    }
+
+    .section-heading {
+      margin-bottom: 28px
+    }
+
+    .section-heading h2 {
+      font-size: clamp(1.65rem, 3vw, 2.35rem);
+      font-weight: 800;
+      margin: 8px 0
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      margin: 0;
+      max-width: 680px
+    }
+
+    .campus-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+      align-items: stretch
+    }
+
+    .campus-card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      min-width: 0
+    }
+
+    .campus-card-top {
+      padding: 25px 25px 18px
+    }
+
+    .campus-label {
+      display: inline-block;
+      background: var(--sky);
+      color: var(--teal-deep);
+      font-size: .74rem;
+      font-weight: 800;
+      letter-spacing: .09em;
+      text-transform: uppercase;
+      padding: 6px 10px;
+      border-radius: 6px
+    }
+
+    .campus-card h3 {
+      font-size: 1.35rem;
+      font-weight: 800;
+      margin: 13px 0 9px
+    }
+
+    .address {
+      color: var(--muted);
+      margin: 0;
+      overflow-wrap: anywhere
+    }
+
+    .map-frame {
+      width: 100%;
+      height: 270px;
+      border: 0;
+      display: block;
+      background: var(--sky)
+    }
+
+    .campus-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      padding: 18px 25px 24px;
+      margin-top: auto
+    }
+
+    .map-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 11px 15px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: .88rem;
+      font-weight: 800;
+      transition: transform .2s, background .2s
+    }
+
+    .map-button:hover {
+      transform: translateY(-2px)
+    }
+
+    .map-button.primary {
+      background: var(--teal-deep);
+      color: #fff
+    }
+
+    .map-button.secondary {
+      border: 1px solid var(--line);
+      background: #fff;
+      color: var(--ink)
+    }
+
+    .contact-note {
+      background: var(--ink);
+      color: #fff;
+      border-radius: 16px;
+      padding: clamp(24px, 4vw, 38px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px
+    }
+
+    .contact-note h2 {
+      font-size: clamp(1.4rem, 2.5vw, 2rem);
+      margin: 0 0 8px;
+      font-weight: 800
+    }
+
+    .contact-note p {
+      margin: 0;
+      color: #d4e0e3;
+      max-width: 720px
+    }
+
+    .contact-note .note-tag {
+      flex: none;
+      border: 1px solid rgba(255, 255, 255, .28);
+      border-radius: 9px;
+      padding: 10px 13px;
+      color: #f4dfb4;
+      font-size: .82rem;
+      font-weight: 800;
+      white-space: nowrap
+    }
+
     /* Shared footer: balanced and responsive */
-    footer{background:var(--ink);color:#fff;padding:28px 0}.footer-inner{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:20px 28px}.footer-brand{display:flex;align-items:center;gap:11px;font-weight:800;min-width:0}.footer-brand img{width:42px;height:42px;object-fit:contain;flex:none}.footer-brand span{font-family:Manrope,sans-serif;line-height:1.3}.footer-links{display:flex;align-items:center;justify-content:flex-end;gap:8px 16px;flex-wrap:wrap}.footer-links a{color:#e0eaed;font-size:.86rem;text-decoration:none;white-space:nowrap}.footer-links a:hover{text-decoration:underline;text-underline-offset:4px}.footer-bottom{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.14);padding-top:15px;display:flex;justify-content:space-between;gap:12px;align-items:center}.footer-bottom p{color:#c8d6da;font-size:.82rem;margin:0}.footer-bottom .footer-note{color:#aebfc4;text-align:right}
-    @media(max-width:1100px){.nav-inner{gap:14px}.nav-links a{padding:9px}.search-form input{width:105px}.nav-actions{gap:4px}}
-    @media(max-width:850px){.topline-inner{justify-content:center;text-align:center}.topline-inner span:last-child{display:none}.nav-inner{min-height:70px;flex-wrap:wrap;justify-content:space-between;padding-top:8px;padding-bottom:8px;gap:10px}.nav-toggle{display:block}.nav-links{display:none;order:3;flex-basis:100%;margin:0;align-items:stretch;flex-direction:column;padding:4px 0 8px;gap:2px}.nav-links.open{display:flex}.nav-links a{padding:11px 12px}.nav-actions{display:none;order:4;flex-basis:100%;padding-bottom:10px}.nav-actions.open{display:flex}.search-form{width:100%}.search-form input{width:auto;flex:1}.page-hero{padding:45px 0}.section{padding:48px 0}.campus-grid{gap:18px}.campus-card-top{padding:21px 21px 16px}.campus-actions{padding:16px 21px 21px}.map-frame{height:240px}.footer-inner{grid-template-columns:1fr;gap:16px}.footer-links{justify-content:flex-start}.footer-bottom{grid-column:auto}}
-    @media(max-width:620px){.container{width:calc(100% - 28px)}.brand{gap:9px;max-width:calc(100% - 55px)}.brand img{width:42px;height:42px}.brand-name{font-size:.9rem}.brand-name small{font-size:.6rem;letter-spacing:.1em}.campus-grid{grid-template-columns:1fr}.map-frame{height:250px}.contact-note{align-items:flex-start;flex-direction:column;gap:16px}.footer-bottom{align-items:flex-start;flex-direction:column}.footer-bottom .footer-note{text-align:left}.page-hero h1{font-size:2.35rem}}
-    @media(max-width:360px){.brand-name{font-size:.82rem}.brand img{width:38px;height:38px}.campus-actions{padding-inline:16px}.map-button{width:100%}}
+    footer {
+      background: var(--ink);
+      color: #fff;
+      padding: 28px 0
+    }
+
+    .footer-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: center;
+      gap: 20px 28px
+    }
+
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      font-weight: 800;
+      min-width: 0
+    }
+
+    .footer-brand img {
+      width: 42px;
+      height: 42px;
+      object-fit: contain;
+      flex: none
+    }
+
+    .footer-brand span {
+      font-family: Manrope, sans-serif;
+      line-height: 1.3
+    }
+
+    .footer-links {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 8px 16px;
+      flex-wrap: wrap
+    }
+
+    .footer-links a {
+      color: #e0eaed;
+      font-size: .86rem;
+      text-decoration: none;
+      white-space: nowrap
+    }
+
+    .footer-links a:hover {
+      text-decoration: underline;
+      text-underline-offset: 4px
+    }
+
+    .footer-bottom {
+      grid-column: 1/-1;
+      border-top: 1px solid rgba(255, 255, 255, .14);
+      padding-top: 15px;
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: center
+    }
+
+    .footer-bottom p {
+      color: #c8d6da;
+      font-size: .82rem;
+      margin: 0
+    }
+
+    .footer-bottom .footer-note {
+      color: #aebfc4;
+      text-align: right
+    }
+
+    @media(max-width:1100px) {
+      .nav-inner {
+        gap: 14px
+      }
+
+      .nav-links a {
+        padding: 9px
+      }
+
+      .search-form input {
+        width: 105px
+      }
+
+      .nav-actions {
+        gap: 4px
+      }
+    }
+
+    @media(max-width:850px) {
+      .topline-inner {
+        justify-content: center;
+        text-align: center
+      }
+
+      .topline-inner span:last-child {
+        display: none
+      }
+
+      .nav-inner {
+        min-height: 70px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        gap: 10px
+      }
+
+      .nav-toggle {
+        display: block
+      }
+
+      .nav-links {
+        display: none;
+        order: 3;
+        flex-basis: 100%;
+        margin: 0;
+        align-items: stretch;
+        flex-direction: column;
+        padding: 4px 0 8px;
+        gap: 2px
+      }
+
+      .nav-links.open {
+        display: flex
+      }
+
+      .nav-links a {
+        padding: 11px 12px
+      }
+
+      .nav-actions {
+        display: none;
+        order: 4;
+        flex-basis: 100%;
+        padding-bottom: 10px
+      }
+
+      .nav-actions.open {
+        display: flex
+      }
+
+      .search-form {
+        width: 100%
+      }
+
+      .search-form input {
+        width: auto;
+        flex: 1
+      }
+
+      .page-hero {
+        padding: 45px 0
+      }
+
+      .section {
+        padding: 48px 0
+      }
+
+      .campus-grid {
+        gap: 18px
+      }
+
+      .campus-card-top {
+        padding: 21px 21px 16px
+      }
+
+      .campus-actions {
+        padding: 16px 21px 21px
+      }
+
+      .map-frame {
+        height: 240px
+      }
+
+      .footer-inner {
+        grid-template-columns: 1fr;
+        gap: 16px
+      }
+
+      .footer-links {
+        justify-content: flex-start
+      }
+
+      .footer-bottom {
+        grid-column: auto
+      }
+    }
+
+    @media(max-width:620px) {
+      .container {
+        width: calc(100% - 28px)
+      }
+
+      .brand {
+        gap: 9px;
+        max-width: calc(100% - 55px)
+      }
+
+      .brand img {
+        width: 42px;
+        height: 42px
+      }
+
+      .brand-name {
+        font-size: .9rem
+      }
+
+      .brand-name small {
+        font-size: .6rem;
+        letter-spacing: .1em
+      }
+
+      .campus-grid {
+        grid-template-columns: 1fr
+      }
+
+      .map-frame {
+        height: 250px
+      }
+
+      .contact-note {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 16px
+      }
+
+      .footer-bottom {
+        align-items: flex-start;
+        flex-direction: column
+      }
+
+      .footer-bottom .footer-note {
+        text-align: left
+      }
+
+      .page-hero h1 {
+        font-size: 2.35rem
+      }
+    }
+
+    @media(max-width:360px) {
+      .brand-name {
+        font-size: .82rem
+      }
+
+      .brand img {
+        width: 38px;
+        height: 38px
+      }
+
+      .campus-actions {
+        padding-inline: 16px
+      }
+
+      .map-button {
+        width: 100%
+      }
+    }
   </style>
 </head>
+
 <body>
-  <div class="topline"><div class="container topline-inner"><span>Benchmark International School · Tongi, Gazipur</span><span>Quality education · Character · Leadership</span></div></div>
+  <div class="topline">
+    <div class="container topline-inner"><span>Benchmark International School · Tongi, Gazipur</span><span>Quality
+        education · Character · Leadership</span></div>
+  </div>
 
   <header class="site-nav">
     <div class="container nav-inner">
@@ -33,7 +670,8 @@
         <img src="images/lol-removebg-preview.png" alt="Benchmark International School logo">
         <span class="brand-name">Benchmark International School<small>Learn · Grow · Lead</small></span>
       </a>
-      <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav">☰</button>
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false"
+        aria-controls="primary-nav">☰</button>
       <nav class="nav-links" id="primary-nav" aria-label="Main navigation">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
@@ -54,7 +692,8 @@
       <div class="container">
         <span class="eyebrow">Get in touch</span>
         <h1>Find the campus<br>that's <span>right for you.</span></h1>
-        <p>Benchmark International School has two campuses in Tongi, Gazipur. Choose a campus below to view its location and get directions.</p>
+        <p>Benchmark International School has two campuses in Tongi, Gazipur. Choose a campus below to view its location
+          and get directions.</p>
       </div>
     </section>
 
@@ -72,11 +711,17 @@
               <span class="campus-label">Campus 01</span>
               <h3>Auchpara Campus</h3>
               <p class="address">S.S. Academy Road, Auchpara, Tongi, Gazipur-1711</p>
+              <p class="phone"><b>Contact:</b> +88 01896 175 005, +88 01896 175 013</p>
             </div>
-            <iframe class="map-frame" title="Map showing Benchmark International School Auchpara Campus" src="https://maps.google.com/maps?q=23.9100788,90.3953036&z=15&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+            <iframe class="map-frame" title="Map showing Benchmark International School Auchpara Campus"
+              src="https://maps.google.com/maps?q=23.9100788,90.3953036&z=15&output=embed" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
             <div class="campus-actions">
-              <a class="map-button primary" href="https://www.google.com/maps/dir/23.9377211,90.4004897/Benchmark+International+School+-+Auchpara+Campus,+S.S+Academy+Road,+Tongi+1711/@23.9216063,90.3792322,6770m/data=!3m1!1e3!4m9!4m8!1m1!4e1!1m5!1m1!1s0x3755c59b35736413:0x391d2a1e7ad0b4b4!2m2!1d90.3953036!2d23.9100788?entry=ttu" target="_blank" rel="noopener noreferrer">Get directions ↗</a>
-              <a class="map-button secondary" href="https://maps.google.com/maps?q=23.9100788,90.3953036" target="_blank" rel="noopener noreferrer">Open map</a>
+              <a class="map-button primary"
+                href="https://www.google.com/maps/dir/23.9377211,90.4004897/Benchmark+International+School+-+Auchpara+Campus,+S.S+Academy+Road,+Tongi+1711/@23.9216063,90.3792322,6770m/data=!3m1!1e3!4m9!4m8!1m1!4e1!1m5!1m1!1s0x3755c59b35736413:0x391d2a1e7ad0b4b4!2m2!1d90.3953036!2d23.9100788?entry=ttu"
+                target="_blank" rel="noopener noreferrer">Get directions ↗</a>
+              <a class="map-button secondary" href="https://maps.google.com/maps?q=23.9100788,90.3953036"
+                target="_blank" rel="noopener noreferrer">Open map</a>
             </div>
           </article>
 
@@ -85,11 +730,17 @@
               <span class="campus-label">Campus 02</span>
               <h3>Dattapara Campus</h3>
               <p class="address">Bonomala Road, BIS Point, Dattapara, Tongi, Gazipur-1712</p>
+              <p class="phone"><b>Contact:</b> +88 01896 175 006, +88 01896 175 005</p>
             </div>
-            <iframe class="map-frame" title="Map showing Benchmark International School Dattapara Campus" src="https://maps.google.com/maps?q=23.9111391,90.4031693&z=15&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+            <iframe class="map-frame" title="Map showing Benchmark International School Dattapara Campus"
+              src="https://maps.google.com/maps?q=23.9111391,90.4031693&z=15&output=embed" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
             <div class="campus-actions">
-              <a class="map-button primary" href="https://www.google.com/maps/dir/23.9377211,90.4004897/Benchmark+International+School+-+Dattapara+Campus,+BIS+Point,+Bonomala+Rd,+Tongi+1712/@23.9235266,90.379109,6924m/data=!3m1!1e3!4m9!4m8!1m1!4e1!1m5!1m1!1s0x3755c5f7d2605a8b:0xe8723066744c72ca!2m2!1d90.4031693!2d23.9111391?entry=ttu" target="_blank" rel="noopener noreferrer">Get directions ↗</a>
-              <a class="map-button secondary" href="https://maps.google.com/maps?q=23.9111391,90.4031693" target="_blank" rel="noopener noreferrer">Open map</a>
+              <a class="map-button primary"
+                href="https://www.google.com/maps/dir/23.9377211,90.4004897/Benchmark+International+School+-+Dattapara+Campus,+BIS+Point,+Bonomala+Rd,+Tongi+1712/@23.9235266,90.379109,6924m/data=!3m1!1e3!4m9!4m8!1m1!4e1!1m5!1m1!1s0x3755c5f7d2605a8b:0xe8723066744c72ca!2m2!1d90.4031693!2d23.9111391?entry=ttu"
+                target="_blank" rel="noopener noreferrer">Get directions ↗</a>
+              <a class="map-button secondary" href="https://maps.google.com/maps?q=23.9111391,90.4031693"
+                target="_blank" rel="noopener noreferrer">Open map</a>
             </div>
           </article>
         </div>
@@ -101,7 +752,8 @@
         <div class="contact-note">
           <div>
             <h2>We look forward to welcoming you.</h2>
-            <p>Please choose the campus that is most convenient for you and use its map link for directions. School phone and email details can be added here when the official contact information is confirmed.</p>
+            <p>Please choose the campus that is most convenient for you and use its map link for directions. School
+              phone and email details can be added here when the official contact information is confirmed.</p>
           </div>
           <span class="note-tag">Benchmark International School</span>
         </div>
@@ -157,4 +809,5 @@
     });
   </script>
 </body>
+
 </html>

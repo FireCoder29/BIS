@@ -2,823 +2,2299 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#25343b">
-  <title>About | Benchmark International School</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>About Us | Benchmark International School</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
     rel="stylesheet">
+
   <style>
-    :root {
-      --ink: #25343b;
-      --teal: #438a98;
-      --deep: #2e6f7b;
-      --sky: #e8f0f3;
-      --paper: #f8fafb;
-      --muted: #64737a;
-      --line: #dfe7ea;
-      --shadow: 0 18px 45px rgba(34, 55, 63, .08)
-    }
+    /* =====================================================
+       RESET
+    ===================================================== */
 
     * {
-      box-sizing: border-box
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
     html {
       scroll-behavior: smooth;
-      scroll-padding-top: 90px
     }
 
     body {
-      margin: 0;
-      background: var(--paper);
-      color: var(--ink);
-      font-family: "DM Sans", Arial, sans-serif;
+      width: 100%;
+      overflow-x: hidden;
+      background: #f8faf9;
+      color: #20343a;
+      font-family: "DM Sans", sans-serif;
       line-height: 1.7;
-      overflow-x: hidden
     }
+
+    img {
+      max-width: 100%;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    button {
+      font: inherit;
+    }
+
+
+    /* =====================================================
+       VARIABLES
+    ===================================================== */
+
+    :root {
+      --primary: #286d78;
+      --primary-dark: #1e5963;
+      --accent: #c9a65b;
+
+      --dark: #1d3035;
+      --text: #33474d;
+      --muted: #6d7c81;
+
+      --light: #eef5f4;
+      --white: #ffffff;
+
+      --border: #dce7e5;
+
+      --radius: 18px;
+
+      --container: 1180px;
+    }
+
+
+    /* =====================================================
+       CONTAINER
+    ===================================================== */
 
     .container {
-      width: min(1160px, calc(100% - 40px))
+      width: min(var(--container),
+          calc(100% - 40px));
+
+      margin: auto;
     }
 
-    .topline {
-      background: var(--ink);
-      color: #dce8eb;
-      font-size: .78rem;
-      letter-spacing: .035em;
-      padding: 7px 0
+
+    /* =====================================================
+       TOP BAR
+    ===================================================== */
+
+    .top-bar {
+      background: var(--dark);
+      color: #dce7e9;
+
+      font-size: 13px;
     }
 
-    .topline .container {
+    .top-bar-inner {
+      min-height: 38px;
+
       display: flex;
+      align-items: center;
       justify-content: space-between;
-      gap: 12px;
-      align-items: center
+
+      gap: 20px;
     }
 
-    .site-nav {
+    .top-bar span {
+      white-space: nowrap;
+    }
+
+
+    /* =====================================================
+       HEADER
+    ===================================================== */
+
+    .header {
       position: sticky;
       top: 0;
       z-index: 1000;
+
       background: rgba(255, 255, 255, .96);
+
       backdrop-filter: blur(14px);
-      border-bottom: 1px solid rgba(37, 52, 59, .09)
+
+      border-bottom: 1px solid rgba(32, 52, 58, .08);
     }
 
-    .nav-inner {
-      min-height: 78px;
+    .header-inner {
+      min-height: 76px;
+
       display: flex;
       align-items: center;
-      gap: 24px
+
+      gap: 35px;
     }
 
-    .brand {
+
+    /* LOGO */
+
+    .logo {
       display: flex;
       align-items: center;
+
       gap: 11px;
-      text-decoration: none;
-      min-width: 0
+
+      flex-shrink: 0;
     }
 
-    .brand img {
-      width: 48px;
-      height: 48px;
+    .logo img {
+      width: 47px;
+      height: 47px;
+
       object-fit: contain;
-      flex: none
     }
 
-    .brand-name {
-      font-family: Manrope, sans-serif;
+    .logo-text {
+      font-family: "Manrope", sans-serif;
+
+      font-size: 16px;
       font-weight: 800;
-      font-size: 1rem;
-      line-height: 1.2
+
+      line-height: 1.15;
     }
 
-    .brand-name small {
+    .logo-text small {
       display: block;
-      color: var(--deep);
+
+      margin-top: 4px;
+
+      color: var(--primary);
+
       font-family: "DM Sans", sans-serif;
-      font-size: .68rem;
-      letter-spacing: .14em;
-      text-transform: uppercase;
+
+      font-size: 10px;
+
       font-weight: 700;
-      margin-top: 4px
+
+      letter-spacing: .14em;
+
+      text-transform: uppercase;
     }
 
-    .nav-links {
+
+    /* NAVIGATION */
+
+    .navigation {
+      margin-left: auto;
+
       display: flex;
       align-items: center;
-      gap: 6px;
-      margin-left: auto
+
+      gap: 4px;
     }
 
-    .nav-links a {
-      font-size: .9rem;
-      font-weight: 700;
-      text-decoration: none;
-      color: #4c5a60;
+    .navigation a {
       padding: 10px 13px;
+
       border-radius: 8px;
-      transition: .2s
+
+      color: #4e6065;
+
+      font-size: 14px;
+
+      font-weight: 700;
+
+      transition: .2s ease;
     }
 
-    .nav-links a:hover,
-    .nav-links a[aria-current=page] {
-      color: var(--deep);
-      background: var(--sky)
+    .navigation a:hover,
+    .navigation a.active {
+      color: var(--primary);
+
+      background: #edf5f4;
     }
 
-    .nav-toggle {
+
+    /* MOBILE BUTTON */
+
+    .menu-button {
       display: none;
-      border: 1px solid var(--line);
+
+      width: 42px;
+      height: 42px;
+
+      border: 1px solid var(--border);
+
       background: #fff;
-      border-radius: 9px;
-      padding: 8px 11px;
-      color: var(--ink);
-      font-size: 1.2rem
+
+      border-radius: 10px;
+
+      cursor: pointer;
+
+      color: var(--dark);
+
+      font-size: 21px;
     }
 
-    .about-hero {
-      padding: clamp(44px, 8vw, 92px) 0;
-      background: linear-gradient(115deg, #25343b 0%, #344f58 58%, #438a98 100%);
-      color: #fff;
+
+    /* =====================================================
+       HERO
+    ===================================================== */
+
+    .hero {
       position: relative;
-      overflow: hidden
-    }
 
-    .about-hero:after {
-      content: "";
-      position: absolute;
-      width: 390px;
-      height: 390px;
-      border: 1px solid rgba(255, 255, 255, .2);
-      border-radius: 50%;
-      right: -130px;
-      top: -190px;
-      box-shadow: 0 0 0 34px rgba(255, 255, 255, .035), 0 0 0 70px rgba(255, 255, 255, .025)
+      overflow: hidden;
+
+      background:
+        linear-gradient(135deg,
+          #edf5f4 0%,
+          #f8faf9 55%,
+          #e7f0ef 100%);
+
+      border-bottom: 1px solid var(--border);
     }
 
     .hero-inner {
+      min-height: 470px;
+
+      display: grid;
+
+      grid-template-columns:
+        minmax(0, 1.15fr) minmax(300px, .85fr);
+
+      align-items: center;
+
+      gap: 70px;
+
+      padding-top: 65px;
+      padding-bottom: 65px;
+    }
+
+
+    /* HERO TEXT */
+
+    .hero-content {
       position: relative;
-      z-index: 1;
-      max-width: 850px
+      z-index: 2;
     }
 
-    .eyebrow {
-      font-size: .76rem;
+    .hero-label {
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 9px;
+
+      color: var(--primary);
+
+      font-size: 12px;
+
       font-weight: 800;
-      letter-spacing: .16em;
+
+      letter-spacing: .14em;
+
       text-transform: uppercase;
-      color: #d7c18c
     }
 
-    .about-hero h1 {
-      font-family: Manrope, sans-serif;
-      font-size: clamp(2.15rem, 5vw, 4rem);
+    .hero-label::before {
+      content: "";
+
+      width: 28px;
+      height: 2px;
+
+      background: var(--accent);
+    }
+
+    .hero h1 {
+      margin-top: 18px;
+
+      max-width: 700px;
+
+      font-family: "Manrope", sans-serif;
+
+      font-size: clamp(2.4rem,
+          5vw,
+          4.5rem);
+
+      line-height: 1.04;
+
+      letter-spacing: -.055em;
+
       font-weight: 800;
-      line-height: 1.12;
-      letter-spacing: -.04em;
-      margin: 16px 0
+
+      color: var(--dark);
     }
 
-    .about-hero p {
-      max-width: 680px;
-      color: #d8e5e8;
-      font-size: 1.05rem;
-      margin: 0
+    .hero h1 span {
+      color: var(--primary);
     }
 
-    .section {
-      padding: 76px 0
+    .hero-description {
+      max-width: 650px;
+
+      margin-top: 22px;
+
+      color: var(--muted);
+
+      font-size: 17px;
     }
 
-    .section-kicker {
-      color: var(--deep);
-      font-size: .75rem;
+
+    /* HERO SIDE */
+
+    .hero-card {
+      position: relative;
+
+      min-height: 315px;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      background: var(--white);
+
+      border: 1px solid var(--border);
+
+      border-radius: 24px;
+
+      box-shadow:
+        0 25px 60px rgba(31, 67, 73, .10);
+    }
+
+    .hero-card::before {
+      content: "";
+
+      position: absolute;
+
+      width: 180px;
+      height: 180px;
+
+      border-radius: 50%;
+
+      background: #e8f1ef;
+
+      top: -50px;
+      right: -45px;
+    }
+
+    .hero-card::after {
+      content: "";
+
+      position: absolute;
+
+      width: 120px;
+      height: 120px;
+
+      border-radius: 50%;
+
+      border: 18px solid rgba(201, 166, 91, .15);
+
+      left: -38px;
+      bottom: -35px;
+    }
+
+    .hero-card-content {
+      position: relative;
+      z-index: 2;
+
+      text-align: center;
+
+      padding: 30px;
+    }
+
+    .hero-card img {
+      width: 165px;
+      height: 165px;
+
+      object-fit: contain;
+    }
+
+    .hero-card-title {
+      margin-top: 15px;
+
+      font-family: "Manrope", sans-serif;
+
+      font-size: 16px;
+
       font-weight: 800;
-      letter-spacing: .15em;
-      text-transform: uppercase
     }
 
-    .section-title {
-      font-family: Manrope, sans-serif;
-      font-size: clamp(1.8rem, 3.5vw, 2.65rem);
-      font-weight: 800;
-      line-height: 1.2;
-      letter-spacing: -.035em;
-      margin: 8px 0 22px
+    .hero-card-subtitle {
+      color: var(--primary);
+
+      font-size: 12px;
+
+      font-weight: 700;
+
+      letter-spacing: .08em;
+
+      text-transform: uppercase;
+    }
+
+
+    /* =====================================================
+       ABOUT SECTION
+    ===================================================== */
+
+    .about {
+      padding: 100px 0;
     }
 
     .about-grid {
       display: grid;
-      grid-template-columns: minmax(0, 1.1fr) minmax(250px, .9fr);
-      gap: clamp(28px, 6vw, 75px);
-      align-items: center
+
+      grid-template-columns:
+        minmax(0, .82fr) minmax(0, 1.18fr);
+
+      gap: 80px;
+
+      align-items: start;
     }
 
-    .about-copy p {
-      color: var(--muted);
-      font-size: 1.02rem
-    }
 
-    .about-side {
-      background: #eaf2f4;
-      border-radius: 18px;
-      padding: clamp(22px, 4vw, 38px);
-      border: 1px solid #d9e5e8;
-      position: relative;
-      overflow: hidden
-    }
+    /* LEFT */
 
-    .about-side:after {
-      content: "BIS";
-      position: absolute;
-      right: 5px;
-      bottom: -38px;
-      font-family: Manrope, sans-serif;
-      font-size: 8rem;
-      font-weight: 800;
-      color: rgba(46, 111, 123, .06);
-      line-height: 1
-    }
-
-    .about-side>* {
-      position: relative;
-      z-index: 1
-    }
-
-    .about-side img {
-      display: block;
-      width: min(100%, 220px);
-      height: auto;
-      max-height: 230px;
-      object-fit: contain;
-      margin: 0 auto 15px
-    }
-
-    .about-side p {
-      font-weight: 700;
-      text-align: center;
-      margin: 0;
-      color: #3d5b64
-    }
-
-    .values-section {
-      background: #edf3f5
-    }
-
-    .section-heading {
-      text-align: center;
-      max-width: 700px;
-      margin: 0 auto 36px
-    }
-
-    .section-heading p {
-      color: var(--muted);
-      margin: 0
-    }
-
-    .value-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 18px
-    }
-
-    .value-card {
-      background: #fff;
-      border: 1px solid var(--line);
-      border-radius: 15px;
-      padding: clamp(24px, 4vw, 38px);
-      box-shadow: 0 8px 24px rgba(34, 55, 63, .045)
-    }
-
-    .value-card .label {
+    .section-label {
       display: inline-block;
-      color: var(--deep);
-      background: var(--sky);
-      border-radius: 7px;
-      padding: 5px 9px;
-      font-size: .73rem;
+
+      color: var(--primary);
+
+      font-size: 12px;
+
       font-weight: 800;
-      letter-spacing: .1em;
+
+      letter-spacing: .14em;
+
       text-transform: uppercase;
-      margin-bottom: 18px
     }
 
-    .value-card h3 {
-      font-family: Manrope, sans-serif;
-      font-size: 1.45rem;
+    .section-title {
+      margin-top: 12px;
+
+      font-family: "Manrope", sans-serif;
+
+      font-size: clamp(2rem,
+          4vw,
+          3.15rem);
+
+      line-height: 1.12;
+
+      letter-spacing: -.045em;
+
       font-weight: 800;
-      margin-bottom: 12px
+
+      color: var(--dark);
     }
 
-    .value-card p {
-      color: var(--muted);
-      margin: 0
+
+    /* ABOUT TEXT */
+
+    .about-text {
+      border-left: 3px solid var(--accent);
+
+      padding-left: 28px;
     }
+
+    .about-text p {
+      color: var(--text);
+
+      font-size: 16px;
+
+      margin-bottom: 20px;
+    }
+
+    .about-text p:last-child {
+      margin-bottom: 0;
+    }
+
+    .about-text strong {
+      color: var(--primary-dark);
+    }
+
+
+    /* =====================================================
+       MISSION / VISION
+    ===================================================== */
+
+    .direction {
+      padding: 95px 0;
+
+      background: var(--light);
+    }
+
+    .section-intro {
+      max-width: 680px;
+
+      margin-bottom: 45px;
+    }
+
+    .section-intro p {
+      margin-top: 15px;
+
+      color: var(--muted);
+    }
+
+
+    .direction-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+      gap: 22px;
+    }
+
+    .direction-card {
+      position: relative;
+
+      overflow: hidden;
+
+      background: var(--white);
+
+      border: 1px solid var(--border);
+
+      border-radius: var(--radius);
+
+      padding: 38px;
+
+      min-height: 285px;
+
+      transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+    }
+
+    .direction-card:hover {
+      transform: translateY(-5px);
+
+      box-shadow:
+        0 20px 45px rgba(31, 67, 73, .10);
+    }
+
+    .direction-number {
+      font-family: "Manrope", sans-serif;
+
+      font-size: 70px;
+
+      line-height: 1;
+
+      color: #edf3f2;
+
+      font-weight: 800;
+
+      position: absolute;
+
+      right: 22px;
+      top: 12px;
+    }
+
+    .direction-tag {
+      position: relative;
+      z-index: 2;
+
+      display: inline-block;
+
+      padding: 6px 10px;
+
+      background: #eaf3f1;
+
+      color: var(--primary);
+
+      border-radius: 6px;
+
+      font-size: 11px;
+
+      font-weight: 800;
+
+      letter-spacing: .1em;
+
+      text-transform: uppercase;
+    }
+
+    .direction-card h3 {
+      position: relative;
+      z-index: 2;
+
+      margin-top: 25px;
+
+      font-family: "Manrope", sans-serif;
+
+      font-size: 25px;
+
+      line-height: 1.2;
+
+      font-weight: 800;
+
+      color: var(--dark);
+    }
+
+    .direction-card p {
+      position: relative;
+      z-index: 2;
+
+      margin-top: 14px;
+
+      color: var(--muted);
+    }
+
+
+    /* =====================================================
+       FACILITIES
+    ===================================================== */
+
+    .facilities {
+      padding: 100px 0;
+    }
+
+    .facilities-heading {
+      display: flex;
+
+      align-items: end;
+
+      justify-content: space-between;
+
+      gap: 30px;
+
+      margin-bottom: 42px;
+    }
+
+    .facilities-heading p {
+      max-width: 450px;
+
+      color: var(--muted);
+    }
+
 
     .facility-grid {
       display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 15px
+
+      grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+      gap: 16px;
     }
 
-    .facility {
-      padding: 22px 19px;
-      border-top: 3px solid var(--teal);
-      background: #fff;
-      border-radius: 0 0 12px 12px;
-      box-shadow: 0 8px 24px rgba(34, 55, 63, .05)
+    .facility-card {
+      padding: 28px 23px;
+
+      background: var(--white);
+
+      border: 1px solid var(--border);
+
+      border-radius: 14px;
+
+      transition:
+        transform .25s ease,
+        border-color .25s ease;
     }
 
-    .facility .symbol {
-      font-size: 1.3rem;
-      color: var(--deep);
-      margin-bottom: 16px
+    .facility-card:hover {
+      transform: translateY(-4px);
+
+      border-color: #b7d0cc;
     }
 
-    .facility h3 {
-      font-family: Manrope, sans-serif;
-      font-size: 1rem;
+    .facility-number {
+      color: var(--accent);
+
+      font-family: "Manrope", sans-serif;
+
+      font-size: 13px;
+
       font-weight: 800;
-      margin-bottom: 7px
     }
 
-    .facility p {
-      font-size: .9rem;
+    .facility-card h3 {
+      margin-top: 25px;
+
+      font-family: "Manrope", sans-serif;
+
+      font-size: 17px;
+
+      font-weight: 800;
+    }
+
+    .facility-card p {
+      margin-top: 8px;
+
       color: var(--muted);
-      margin: 0
+
+      font-size: 14px;
     }
 
-    .gallery-empty {
-      padding: 34px 20px;
-      border: 1px dashed #b7cbd1;
-      border-radius: 15px;
-      background: #f2f7f8;
+
+    /* =====================================================
+       GALLERY
+    ===================================================== */
+
+    .gallery-section {
+      padding: 95px 0;
+
+      background: #f0f5f4;
+    }
+
+    .gallery-heading {
       text-align: center;
-      color: var(--muted)
+
+      max-width: 650px;
+
+      margin: 0 auto 42px;
     }
 
-    .gallery-empty strong {
+    .gallery-heading p {
+      margin-top: 13px;
+
+      color: var(--muted);
+    }
+
+
+    .school-gallery {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+      gap: 20px;
+    }
+
+    .gallery-card {
+      position: relative;
+
+      overflow: hidden;
+
       display: block;
-      color: var(--ink);
-      font-family: Manrope, sans-serif;
-      font-size: 1.1rem;
-      margin-bottom: 4px
+
+      aspect-ratio: 4 / 3;
+
+      background: #e6eeec;
+
+      border-radius: 16px;
+
+      border: 1px solid var(--border);
+
+      box-shadow:
+        0 8px 25px rgba(31, 67, 73, .06);
     }
 
-    footer {
-      background: var(--ink);
-      color: #fff;
-      padding: 28px 0
+    .gallery-card img {
+      width: 100%;
+      height: 100%;
+
+      /*
+        FULL IMAGE
+        No cropping.
+      */
+
+      object-fit: contain;
+
+      display: block;
+
+      transition:
+        transform .45s ease,
+        filter .35s ease;
     }
 
-    .footer-inner {
+    .gallery-overlay {
+      position: absolute;
+
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      min-height: 105px;
+
       display: flex;
+
+      align-items: end;
+
       justify-content: space-between;
-      align-items: center;
-      gap: 18px
+
+      gap: 12px;
+
+      padding: 45px 18px 17px;
+
+      background:
+        linear-gradient(to top,
+          rgba(0, 0, 0, .92),
+          rgba(0, 0, 0, .60) 38%,
+          transparent);
+
+      color: #fff;
     }
+
+    .gallery-overlay strong {
+      font-family: "Manrope", sans-serif;
+
+      font-size: 15px;
+
+      font-weight: 800;
+    }
+
+    .gallery-arrow {
+      width: 31px;
+      height: 31px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 50%;
+
+      background: rgba(255, 255, 255, .14);
+
+      border: 1px solid rgba(255, 255, 255, .25);
+
+      flex-shrink: 0;
+    }
+
+    .gallery-card:hover img {
+      transform: scale(1.025);
+
+      filter: brightness(.92);
+    }
+
+
+    /* =====================================================
+       FOOTER
+    ===================================================== */
+
+    .footer {
+      background: #1d3035;
+
+      color: #fff;
+
+      padding-top: 65px;
+    }
+
+    .footer-grid {
+      display: grid;
+
+      grid-template-columns:
+        1.25fr .8fr 1fr .85fr;
+
+      gap: 45px;
+
+      padding-bottom: 55px;
+    }
+
 
     .footer-brand {
       display: flex;
-      align-items: center;
-      gap: 11px;
-      font-weight: 800
+
+      align-items: flex-start;
+
+      gap: 13px;
     }
 
     .footer-brand img {
-      width: 500x;
-      height: 100px;
-      object-fit: contain
+      width: 50px;
+      height: 50px;
+
+      object-fit: contain;
+
+      flex-shrink: 0;
     }
 
-    .footer-inner p {
-      color: #c8d6da;
-      font-size: .82rem;
-      margin: 0
-    }
+    .footer-brand h2 {
+      font-family: "Manrope", sans-serif;
 
-    .footer-links {
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap
-    }
-
-    .footer-links a {
-      color: #e0eaed;
-      font-size: .86rem;
-      text-decoration: none
-    }
-
-    /* Footer */
-    .site-footer {
-      background: #102a43;
-      color: #ffffff;
-      padding: 50px 7% 0;
-      font-family: Arial, sans-serif;
-    }
-
-    .footer-container {
-      max-width: 1200px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: 1.4fr 1fr 1.2fr;
-      gap: 40px;
-      padding-bottom: 35px;
-    }
-
-    .site-footer h2 {
-      font-size: 22px;
-      margin: 0 0 14px;
-    }
-
-    .site-footer h3 {
       font-size: 17px;
-      margin: 0 0 18px;
-      color: #55d6c2;
+
+      line-height: 1.25;
     }
 
-    .site-footer h4 {
-      font-size: 15px;
-      margin: 12px 0 6px;
+    .footer-brand p {
+      margin-top: 10px;
+
+      color: #b9c9cc;
+
+      font-size: 13px;
+
+      max-width: 250px;
     }
 
-    .footer-brand p,
-    .branch p {
-      color: #cbd5e1;
+
+    .footer-column h3 {
+      font-family: "Manrope", sans-serif;
+
       font-size: 14px;
-      line-height: 1.8;
+
+      margin-bottom: 19px;
+
+      color: #fff;
     }
 
-    .footer-links {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 12px;
+    .footer-column a {
+      display: block;
+
+      width: fit-content;
+
+      margin-bottom: 9px;
+
+      color: #b9c9cc;
+
+      font-size: 13px;
+
+      transition: .2s;
     }
 
-    .footer-links a,
-    .branch a {
-      color: #e2e8f0;
-      text-decoration: none;
-      font-size: 14px;
-      transition: color 0.3s ease;
+    .footer-column a:hover {
+      color: #fff;
+
+      transform: translateX(3px);
     }
 
-    .footer-links a:hover,
-    .branch a:hover {
-      color: #55d6c2;
+
+    .footer-column p {
+      color: #b9c9cc;
+
+      font-size: 13px;
+
+      line-height: 1.65;
     }
 
     .branch {
-      margin-bottom: 18px;
+      margin-bottom: 17px;
     }
 
-    .branch a {
-      display: inline-block;
-      margin-top: 5px;
-      color: #55d6c2;
+    .branch h4 {
+      font-size: 13px;
+
+      color: #fff;
+
+      margin-bottom: 3px;
     }
+
+    .branch p {
+      margin-bottom: 5px;
+    }
+
 
     .footer-bottom {
-      border-top: 1px solid #334e68;
-      padding: 20px 0;
-      text-align: center;
+      border-top: 1px solid rgba(255, 255, 255, .10);
+
+      padding: 19px 0;
+    }
+
+    .footer-bottom-inner {
+      display: flex;
+
+      justify-content: space-between;
+
+      gap: 15px;
     }
 
     .footer-bottom p {
-      color: #cbd5e1;
-      font-size: 13px;
-      margin: 0;
+      color: #9eb1b5;
+
+      font-size: 12px;
     }
 
-    /* Responsive Footer */
-    @media (max-width: 768px) {
-      .footer-container {
+
+    /* =====================================================
+       TABLET
+    ===================================================== */
+
+    @media (max-width: 1000px) {
+
+      .hero-inner {
         grid-template-columns: 1fr;
-        gap: 28px;
+
+        gap: 45px;
       }
 
-      .site-footer {
-        padding: 35px 6% 0;
-      }
-    }
+      .hero-card {
+        max-width: 480px;
 
-    @media(max-width:1000px) {
-      .nav-inner {
-        min-height: 70px;
-        gap: 14px
-      }
+        width: 100%;
 
-      .nav-links a {
-        padding: 9px
-      }
-
-      .facility-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr))
-      }
-    }
-
-    @media(max-width:780px) {
-      .topline .container {
-        justify-content: center;
-        text-align: center
-      }
-
-      .topline .container span:last-child {
-        display: none
-      }
-
-      .nav-inner {
-        min-height: 68px;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        padding-top: 8px;
-        padding-bottom: 8px
-      }
-
-      .brand img {
-        width: 40px;
-        height: 40px
-      }
-
-      .brand-name {
-        font-size: .9rem
-      }
-
-      .brand-name small {
-        font-size: .61rem
-      }
-
-      .nav-toggle {
-        display: block
-      }
-
-      .nav-links {
-        display: none;
-        order: 3;
-        flex-basis: 100%;
-        margin: 0;
-        align-items: stretch;
-        flex-direction: column;
-        padding: 4px 0 8px
-      }
-
-      .nav-links.open {
-        display: flex
-      }
-
-      .nav-links a {
-        padding: 11px 12px
-      }
-
-      .section {
-        padding: 55px 0
+        margin: auto;
       }
 
       .about-grid {
-        grid-template-columns: 1fr
+        grid-template-columns: 1fr;
+
+        gap: 45px;
       }
 
-      .about-side {
-        max-width: 520px;
-        width: 100%;
-        margin: 0 auto
+      .about-text {
+        max-width: 850px;
       }
 
-      .footer-inner {
-        align-items: flex-start;
-        flex-direction: column
-      }
-    }
-
-    @media(max-width:480px) {
-      .container {
-        width: calc(100% - 28px)
-      }
-
-      .about-hero {
-        padding: 44px 0
-      }
-
-      .about-hero h1 {
-        font-size: 2.15rem
-      }
-
-      .section {
-        padding: 44px 0
-      }
-
-      .value-grid,
       .facility-grid {
-        grid-template-columns: 1fr
+        grid-template-columns:
+          repeat(2, minmax(0, 1fr));
       }
 
-      .value-card {
-        padding: 24px
+      .school-gallery {
+        grid-template-columns:
+          repeat(2, minmax(0, 1fr));
       }
 
-      .facility {
-        padding: 20px
+      .footer-grid {
+        grid-template-columns:
+          repeat(2, minmax(0, 1fr));
       }
 
-      .footer-links {
-        gap: 12px
-      }
     }
 
-    @media(prefers-reduced-motion:reduce) {
+
+    /* =====================================================
+       MOBILE
+    ===================================================== */
+
+    @media (max-width: 760px) {
+
+      .container {
+        width: calc(100% - 30px);
+      }
+
+
+      /* TOP BAR */
+
+      .top-bar-inner {
+        justify-content: center;
+
+        min-height: 34px;
+      }
+
+      .top-bar span:last-child {
+        display: none;
+      }
+
+
+      /* HEADER */
+
+      .header-inner {
+        min-height: 68px;
+
+        flex-wrap: wrap;
+
+        gap: 10px;
+      }
+
+      .logo img {
+        width: 41px;
+        height: 41px;
+      }
+
+      .logo-text {
+        font-size: 14px;
+      }
+
+      .logo-text small {
+        font-size: 8px;
+      }
+
+      .menu-button {
+        display: block;
+
+        margin-left: auto;
+      }
+
+      .navigation {
+        display: none;
+
+        width: 100%;
+
+        order: 3;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        padding: 5px 0 12px;
+      }
+
+      .navigation.show {
+        display: flex;
+      }
+
+      .navigation a {
+        padding: 11px 12px;
+      }
+
+
+      /* HERO */
+
+      .hero-inner {
+        min-height: auto;
+
+        padding-top: 55px;
+        padding-bottom: 55px;
+
+        gap: 35px;
+      }
+
+      .hero h1 {
+        font-size: clamp(2.35rem,
+            11vw,
+            3.4rem);
+      }
+
+      .hero-description {
+        font-size: 15px;
+      }
+
+      .hero-card {
+        min-height: 260px;
+      }
+
+      .hero-card img {
+        width: 135px;
+        height: 135px;
+      }
+
+
+      /* ABOUT */
+
+      .about {
+        padding: 65px 0;
+      }
+
+      .about-grid {
+        gap: 35px;
+      }
+
+      .about-text {
+        padding-left: 19px;
+      }
+
+      .about-text p {
+        font-size: 15px;
+      }
+
+
+      /* DIRECTION */
+
+      .direction {
+        padding: 65px 0;
+      }
+
+      .direction-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .direction-card {
+        min-height: auto;
+
+        padding: 28px;
+      }
+
+
+      /* FACILITIES */
+
+      .facilities {
+        padding: 65px 0;
+      }
+
+      .facilities-heading {
+        display: block;
+
+        margin-bottom: 30px;
+      }
+
+      .facilities-heading p {
+        margin-top: 12px;
+      }
+
+      .facility-grid {
+        grid-template-columns: 1fr;
+      }
+
+
+      /* GALLERY */
+
+      .gallery-section {
+        padding: 65px 0;
+      }
+
+      .school-gallery {
+        /*
+          ONE IMAGE PER ROW
+          on portrait phone.
+        */
+
+        grid-template-columns: 1fr;
+
+        gap: 17px;
+      }
+
+      .gallery-card {
+        aspect-ratio: 16 / 10;
+
+        border-radius: 13px;
+      }
+
+      .gallery-overlay {
+        min-height: 90px;
+
+        padding:
+          40px 15px 14px;
+      }
+
+      .gallery-overlay strong {
+        font-size: 13px;
+      }
+
+
+      /* FOOTER */
+
+      .footer {
+        padding-top: 48px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+
+        gap: 34px;
+
+        padding-bottom: 42px;
+      }
+
+      .footer-bottom-inner {
+        flex-direction: column;
+
+        align-items: flex-start;
+      }
+
+    }
+
+
+    /* =====================================================
+   VIEW MORE GALLERY BUTTON
+===================================================== */
+
+    .gallery-view-more {
+      display: flex;
+
+      justify-content: center;
+
+      margin-top: 38px;
+    }
+
+    .gallery-view-more a {
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 12px;
+
+      padding: 13px 22px;
+
+      border: 1px solid #286d78;
+
+      border-radius: 8px;
+
+      background: #286d78;
+
+      color: #ffffff;
+
+      font-family: "Manrope", sans-serif;
+
+      font-size: 13px;
+
+      font-weight: 800;
+
+      transition:
+        background .25s ease,
+        transform .25s ease,
+        box-shadow .25s ease;
+    }
+
+    .gallery-view-more a span {
+      font-size: 18px;
+
+      line-height: 1;
+
+      transition: transform .25s ease;
+    }
+
+    .gallery-view-more a:hover {
+      background: #1e5963;
+
+      transform: translateY(-3px);
+
+      box-shadow:
+        0 10px 25px rgba(40, 109, 120, .18);
+    }
+
+    .gallery-view-more a:hover span {
+      transform: translateX(4px);
+    }
+
+
+    /* =====================================================
+       SMALL PHONE
+    ===================================================== */
+
+    @media (max-width: 430px) {
+
+      .hero h1 {
+        font-size: 2.3rem;
+      }
+
+      .section-title {
+        font-size: 2rem;
+      }
+
+      .direction-card {
+        padding: 24px;
+      }
+
+      .gallery-card {
+        aspect-ratio: 16 / 10;
+      }
+
+    }
+
+
+    /* =====================================================
+       PHONE LANDSCAPE
+    ===================================================== */
+
+    @media (max-width: 950px) and (max-height: 500px) and (orientation: landscape) {
+
+      .school-gallery {
+        grid-template-columns:
+          repeat(2, minmax(0, 1fr));
+      }
+
+      .hero-inner {
+        grid-template-columns:
+          1.1fr .9fr;
+
+        min-height: 400px;
+      }
+
+      .hero-card {
+        min-height: 270px;
+      }
+
+    }
+
+
+    /* =====================================================
+       ACCESSIBILITY
+    ===================================================== */
+
+    @media (prefers-reduced-motion: reduce) {
 
       *,
       *::before,
       *::after {
-        scroll-behavior: auto !important;
+        animation: none !important;
+
         transition: none !important;
-        animation: none !important
+
+        scroll-behavior: auto !important;
       }
+
     }
   </style>
+
 </head>
 
+
 <body>
-  <div class="topline">
-    <div class="container"><span>Benchmark International School · Tongi, Gazipur</span><span>Quality education ·
-        Character · Leadership</span></div>
-  </div>
-  <header class="site-nav">
-    <div class="container nav-inner">
-      <a class="brand" href="index.html" aria-label="Benchmark International School home"><img
-          src="images/lol-removebg-preview-removebg-preview.png" alt="School logo"><span class="brand-name">Benchmark International
-          School<small>Learn · Grow · Lead</small></span></a>
-      <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false"
-        aria-controls="primary-nav">☰</button>
-      <nav class="nav-links" id="primary-nav" aria-label="Main navigation"><a href="index.html">Home</a><a
-          href="about.html" aria_current="page">About</a>
-          <a href="index.html#admission">Admission</a><a
-          href="li1.html">🚧 Under Development...</a></nav>
+
+
+  <!-- =====================================================
+       TOP BAR
+  ===================================================== -->
+
+  <div class="top-bar">
+
+    <div class="container top-bar-inner">
+
+      <span>
+        Benchmark International School · Tongi, Gazipur
+      </span>
+
+      <span>
+        Quality education · Character · Leadership
+      </span>
+
     </div>
+
+  </div>
+
+
+  <!-- =====================================================
+       HEADER
+  ===================================================== -->
+
+  <header class="header">
+
+    <div class="container header-inner">
+
+
+      <a href="index.html" class="logo" aria-label="Benchmark International School Home">
+
+        <img src="images/lol-removebg-preview-removebg-preview.png" alt="Benchmark International School Logo">
+
+        <span class="logo-text">
+
+          Benchmark International School
+
+          <small>
+            Learn · Grow · Lead
+          </small>
+
+        </span>
+
+      </a>
+
+
+      <button class="menu-button" id="menuButton" aria-label="Open navigation" aria-expanded="false">
+
+        ☰
+
+      </button>
+
+
+      <nav class="navigation" id="navigation" aria-label="Main navigation">
+
+        <a href="index.html">
+          Home
+        </a>
+
+        <a href="about.html" class="active" aria-current="page">
+
+          About Us
+
+        </a>
+
+        <a href="admission.html">
+          Admission
+        </a>
+
+        <a href="contact.html">
+          Contact
+        </a>
+
+        <a href="index.html#management">
+          School Management
+        </a>
+
+      </nav>
+
+
+    </div>
+
   </header>
 
+
+  <!-- =====================================================
+       MAIN
+  ===================================================== -->
+
   <main>
-    <section class="about-hero">
-      <div class="container hero-inner"><span class="eyebrow">Who we are</span>
-        <h1>About Benchmark International School</h1>
-        <p>Discover our educational approach, the values that guide us, and the learning environment we aim to create
-          for every student.</p>
-      </div>
-    </section>
 
-    <section class="section">
-      <div class="container about-grid">
-        <div class="about-copy"><span class="section-kicker">About our school</span>
-          <h2 class="section-title">Education for learning, character and confidence.</h2>
-          <p><strong>Benchmark International School (BIS)</strong> is a modern educational institution located in Tongi,
-            Gazipur, Bangladesh. Established in 2022, the school was founded with the goal of providing quality
-            education and creating a learning environment where students can grow academically, socially, and morally.
+
+    <!-- ===================================================
+         HERO
+    =================================================== -->
+
+    <section class="hero">
+
+      <div class="container hero-inner">
+
+
+        <div class="hero-content">
+
+          <span class="hero-label">
+            Who we are
+          </span>
+
+
+          <h1>
+            About
+            <span>Benchmark</span>
+            International School
+          </h1>
+
+
+          <p class="hero-description">
+
+            Discover our educational approach, the values that guide us,
+            and the learning environment we aim to create for every student.
+
           </p>
-          <p>The institution offers education from <strong>Playgroup to Secondary School Certificate (SSC)</strong>
-            level. The school follows the <strong>National Curriculum of Bangladesh</strong> and provides instruction in
-            both <strong>Bangla and English mediums</strong>.</p>
-          <p>Benchmark International School believes that education should not only focus on academic excellence but
-            also on character building, creativity, leadership, and confidence. The school encourages students to
-            participate in various extracurricular activities including cultural programs, sports, debates, and creative
-            competitions.</p>
+
         </div>
-        <aside class="about-side"><img src="images/mm-removebg-preview.png" alt="Benchmark International School emblem">
-          <p>Benchmark International School (BIS)</p>
-        </aside>
+
+
+        <div class="hero-card">
+
+          <div class="hero-card-content">
+
+            <img src="images/mm-removebg-preview.png" alt="Benchmark International School emblem">
+
+            <div class="hero-card-title">
+              Benchmark International School
+            </div>
+
+            <div class="hero-card-subtitle">
+              Learn · Grow · Lead
+            </div>
+
+          </div>
+
+        </div>
+
+
       </div>
+
     </section>
 
-    <section class="section values-section">
-      <div class="container">
-        <div class="section-heading"><span class="section-kicker">Our direction</span>
-          <h2 class="section-title">Mission &amp; Vision</h2>
-          <p>The purpose and ambition that shape our approach to education.</p>
+
+    <!-- ===================================================
+         ABOUT
+    =================================================== -->
+
+    <section class="about">
+
+      <div class="container about-grid">
+
+
+        <div>
+
+          <span class="section-label">
+            About our school
+          </span>
+
+
+          <h2 class="section-title">
+            Education for learning,
+            character and confidence.
+          </h2>
+
         </div>
-        <div class="value-grid">
-          <article class="value-card"><span class="label">Our Mission</span>
-            <h3>Support every student's growth.</h3>
-            <p>Our mission is to provide a supportive and innovative learning environment where students can achieve
-              academic excellence and develop strong moral values.</p>
-          </article>
-          <article class="value-card"><span class="label">Our Vision</span>
-            <h3>Strive for educational excellence.</h3>
-            <p>Our vision is to become one of the most respected educational institutions in Bangladesh by providing
-              high-quality education, modern facilities, and dedicated teachers.</p>
-          </article>
+
+
+        <div class="about-text">
+
+          <p>
+
+            <strong>
+              Benchmark International School (BIS)
+            </strong>
+
+            is a modern educational institution located in Tongi,
+            Gazipur, Bangladesh. Established in 2022, the school was
+            founded with the goal of providing quality education and
+            creating a learning environment where students can grow
+            academically, socially, and morally.
+
+          </p>
+
+
+          <p>
+
+            The institution offers education from
+            <strong>
+              Playgroup to Secondary School Certificate (SSC)
+            </strong>
+            level. The school follows the
+            <strong>
+              National Curriculum of Bangladesh
+            </strong>
+            and provides instruction in both
+            <strong>
+              Bangla and English mediums
+            </strong>.
+
+          </p>
+
+
+          <p>
+
+            Benchmark International School believes that education
+            should not only focus on academic excellence but also on
+            character building, creativity, leadership, and confidence.
+            The school encourages students to participate in various
+            extracurricular activities including cultural programs,
+            sports, debates, and creative competitions.
+
+          </p>
+
         </div>
+
+
       </div>
+
     </section>
 
-    <section class="section">
+
+    <!-- ===================================================
+         MISSION & VISION
+    =================================================== -->
+
+    <section class="direction">
+
       <div class="container">
-        <div class="section-heading"><span class="section-kicker">Learning environment</span>
-          <h2 class="section-title">School Facilities</h2>
+
+
+        <div class="section-intro">
+
+          <span class="section-label">
+            Our direction
+          </span>
+
+
+          <h2 class="section-title">
+            Mission &amp; Vision
+          </h2>
+
+
+          <p>
+            The purpose and ambition that shape our approach to education.
+          </p>
+
         </div>
+
+
+        <div class="direction-grid">
+
+
+          <!-- MISSION -->
+
+          <article class="direction-card">
+
+            <span class="direction-number">
+              01
+            </span>
+
+
+            <span class="direction-tag">
+              Our Mission
+            </span>
+
+
+            <h3>
+              Support every student's growth.
+            </h3>
+
+
+            <p>
+
+              Our mission is to provide a supportive and innovative
+              learning environment where students can achieve academic
+              excellence and develop strong moral values.
+
+            </p>
+
+          </article>
+
+
+          <!-- VISION -->
+
+          <article class="direction-card">
+
+            <span class="direction-number">
+              02
+            </span>
+
+
+            <span class="direction-tag">
+              Our Vision
+            </span>
+
+
+            <h3>
+              Strive for educational excellence.
+            </h3>
+
+
+            <p>
+
+              Our vision is to become one of the most respected
+              educational institutions in Bangladesh by providing
+              high-quality education, modern facilities, and dedicated teachers.
+
+            </p>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         FACILITIES
+    =================================================== -->
+
+    <section class="facilities">
+
+      <div class="container">
+
+
+        <div class="facilities-heading">
+
+          <div>
+
+            <span class="section-label">
+              Learning environment
+            </span>
+
+
+            <h2 class="section-title">
+              School Facilities
+            </h2>
+
+          </div>
+
+
+          <p>
+            An environment designed to support learning,
+            participation, confidence and development.
+          </p>
+
+        </div>
+
+
         <div class="facility-grid">
-          <article class="facility">
-            <div class="symbol" aria-hidden="true">01</div>
-            <h3>Modern Education</h3>
-            <p>Activity-based learning and updated teaching methods.</p>
+
+
+          <article class="facility-card">
+
+            <span class="facility-number">
+              01
+            </span>
+
+
+            <h3>
+              Modern Education
+            </h3>
+
+
+            <p>
+              Activity-based learning and updated teaching methods.
+            </p>
+
           </article>
-          <article class="facility">
-            <div class="symbol" aria-hidden="true">02</div>
-            <h3>Qualified Teachers</h3>
-            <p>Skilled and committed teachers.</p>
+
+
+          <article class="facility-card">
+
+            <span class="facility-number">
+              02
+            </span>
+
+
+            <h3>
+              Qualified Teachers
+            </h3>
+
+
+            <p>
+              Skilled and committed teachers.
+            </p>
+
           </article>
-          <article class="facility">
-            <div class="symbol" aria-hidden="true">03</div>
-            <h3>Extracurricular Activities</h3>
-            <p>Sports, cultural events, debates, and competitions.</p>
+
+
+          <article class="facility-card">
+
+            <span class="facility-number">
+              03
+            </span>
+
+
+            <h3>
+              Extracurricular Activities
+            </h3>
+
+
+            <p>
+              Sports, cultural events, debates, and competitions.
+            </p>
+
           </article>
-          <article class="facility">
-            <div class="symbol" aria-hidden="true">04</div>
-            <h3>Air Conditioned Classrooms</h3>
-            <p>Comfortable classrooms for better learning environment.</p>
+
+
+          <article class="facility-card">
+
+            <span class="facility-number">
+              04
+            </span>
+
+
+            <h3>
+              Air Conditioned Classrooms
+            </h3>
+
+
+            <p>
+              Comfortable classrooms for better learning environment.
+            </p>
+
           </article>
+
+
         </div>
+
       </div>
+
     </section>
 
-    <section class="section values-section">
+
+    <!-- ===================================================
+         PHOTO GALLERY
+    =================================================== -->
+
+    <section class="gallery-section">
+
       <div class="container">
-        <div class="section-heading"><span class="section-kicker">School moments</span>
-          <h2 class="section-title">Photo Gallery</h2>
+
+
+        <div class="gallery-heading">
+
+          <span class="section-label">
+            School moments
+          </span>
+
+
+          <h2 class="section-title">
+            Photo Gallery
+          </h2>
+
+
+          <p>
+            Explore moments from Benchmark International School.
+            More school photos can be added anytime.
+          </p>
+
         </div>
-        <div class="gallery-empty"><strong>No Photos added yet...</strong><span>School gallery images will appear here
-            when available.</span></div>
+
+
+        <div class="school-gallery">
+
+
+          <!-- PHOTO 01 -->
+
+          <a href="images/orientation day.jpg" class="gallery-card" target="_blank" rel="noopener noreferrer">
+
+            <img src="images/orientation day.jpg" alt="Benchmark International School campus" loading="lazy">
+
+
+            <div class="gallery-overlay">
+
+              <strong>
+                Orientation Day (Dattapara Campus)
+              </strong>
+
+              <span class="gallery-arrow">
+                ↗
+              </span>
+
+            </div>
+
+          </a>
+
+
+          <!-- PHOTO 02 -->
+
+          <a href="images/orientation day auch.jpg" class="gallery-card" target="_blank" rel="noopener noreferrer">
+
+            <img src="images/orientation day auch.jpg" alt="Benchmark International School school life" loading="lazy">
+
+
+            <div class="gallery-overlay">
+
+              <strong>
+                Orientation Day (Auchpara Campus)
+              </strong>
+
+              <span class="gallery-arrow">
+                ↗
+              </span>
+
+            </div>
+
+          </a>
+
+
+          <!-- PHOTO 03 -->
+
+          <a href="images/pohela boishakh.jpg" class="gallery-card" target="_blank" rel="noopener noreferrer">
+
+            <img src="images/pohela boishakh.jpg" alt="Benchmark International School activities" loading="lazy">
+
+
+            <div class="gallery-overlay">
+
+              <strong>
+                Pohela Boishakh celebration (bangla year)
+              </strong>
+
+              <span class="gallery-arrow">
+                ↗
+              </span>
+
+            </div>
+
+          </a>
+
+
+          <!-- PHOTO 04 -->
+
+          <a href="images/21 Feb.jpg" class="gallery-card" target="_blank" rel="noopener noreferrer">
+
+            <img src="images/21 Feb.jpg" alt="Benchmark International School events" loading="lazy">
+
+
+            <div class="gallery-overlay">
+
+              <strong>
+                Independence Day Drawing Competition by Faber Castle
+              </strong>
+
+              <span class="gallery-arrow">
+                ↗
+              </span>
+
+            </div>
+
+          </a>
+
+
+          <!-- PHOTO 05 -->
+
+          <a href="images/assembly.jpg" class="gallery-card" target="_blank" rel="noopener noreferrer">
+
+            <img src="images/assembly.jpg" alt="Benchmark International School learning environment" loading="lazy">
+
+
+            <div class="gallery-overlay">
+
+              <strong>
+                Morning Assembly (Dattapara Campus)
+              </strong>
+
+              <span class="gallery-arrow">
+                ↗
+              </span>
+
+            </div>
+
+          </a>
+
+
+          <!-- PHOTO 06 -->
+
+          <a href="images/PTM.jpg" class="gallery-card" target="_blank" rel="noopener noreferrer">
+
+            <img src="images/PTM.jpg" alt="Benchmark International School community" loading="lazy">
+
+
+            <div class="gallery-overlay">
+
+              <strong>
+                Parent-Teacher Meeting (Dattapara Campus)
+              </strong>
+
+              <span class="gallery-arrow">
+                ↗
+              </span>
+
+            </div>
+
+          </a>
+
+          <!-- PHOTO 07 -->
+
+          <a href="images/marks alrounder2.jpg" class="gallery-card" target="_blank" rel="noopener noreferrer">
+
+            <img src="images/marks alrounder2.jpg" alt="Benchmark International School community" loading="lazy">
+
+
+            <div class="gallery-overlay">
+
+              <strong>
+                Marks Allrounder Award Ceremony
+              </strong>
+
+              <span class="gallery-arrow">
+                ↗
+              </span>
+
+            </div>
+
+          </a>
+
+        </div>
+
+        <!-- VIEW MORE -->
+
+        <div class="gallery-view-more">
+
+          <a href="gallery.html">
+
+            View More Photos
+
+            <span>→</span>
+
+          </a>
+
+        </div>
+
       </div>
+
     </section>
+
+
   </main>
 
-  <footer class="site-footer">
-    <div class="footer-container">
 
-      <!-- School Information -->
-      <div class="footer-brand">
-        <img src="images/lol-removebg-preview-removebg-preview.png" alt="Benchmark International School logo" style="width: 100px; height: 100px;">
-        <br>
-        <!-- <h2>Benchmark International School</h2> -->
-        <p>Building knowledge, character, and a brighter future.</p>
-      </div>
+  <!-- =====================================================
+       FOOTER
+  ===================================================== -->
 
-      <!-- Quick Links -->
-      <div class="footer-links">
-        <h3>Quick Links</h3>
-        <a href="index.html">Home</a>
-        <a href="about.html">About Us</a>
-        <a href="admission.html">Admission</a>
-        <a href="index.html#management">School Management</a>
-        <a href="index.html#notice">Notice Board</a>
-      </div>
+  <footer class="footer">
 
-      <!-- Our Branches -->
-      <div class="footer-branches">
-        <h3>Our Branches</h3>
 
-        <div class="branch">
-          <h4>Branch 1</h4>
-          <p>Enter the first branch address</p>
-          <a href="YOUR_FIRST_GOOGLE_MAPS_LINK" target="_blank" rel="noopener noreferrer">
-            <i class="fas fa-map-marker-alt"></i> Get Directions
-          </a>
+    <div class="container footer-grid">
+
+
+      <!-- BRAND -->
+
+      <div>
+
+        <div class="footer-brand">
+
+          <img src="images/lol-removebg-preview-removebg-preview.png" alt="Benchmark International School logo">
+
+
+          <div>
+
+            <h2>
+              Benchmark International School
+            </h2>
+
+
+            <p>
+              Building knowledge, character, and a brighter future.
+            </p>
+
+          </div>
+
         </div>
 
-        <div class="branch">
-          <h4>Branch 2</h4>
-          <p>Enter the second branch address</p>
-          <a href="YOUR_SECOND_GOOGLE_MAPS_LINK" target="_blank" rel="noopener noreferrer">
-            <i class="fas fa-map-marker-alt"></i> Get Directions
-          </a>
-        </div>
       </div>
+
+
+      <!-- LINKS -->
+
+      <div class="footer-column">
+
+        <h3>
+          Quick Links
+        </h3>
+
+
+        <a href="index.html">
+          Home
+        </a>
+
+
+        <a href="about.html">
+          About Us
+        </a>
+
+
+        <a href="admission.html">
+          Admission
+        </a>
+
+
+        <a href="contact.html">
+          Contact Us
+        </a>
+
+
+        <a href="index.html#management">
+          School Management
+        </a>
+
+
+        <a href="index.html#notice">
+          Notice Board
+        </a>
+
+      </div>
+
+
+      <!-- BRANCHES -->
+
+      <div class="footer-column">
+
+        <h3>
+          Our Branches
+        </h3>
+
+
+        <div class="branch">
+
+          <h4>
+            Auchpara Campus
+          </h4>
+
+
+          <p>
+            S.S. Academy Road, Auchpara, Tongi, Gazipur-1711
+          </p>
+
+
+          <a href="https://maps.google.com/maps?q=23.9100788,90.3953036" target="_blank" rel="noopener noreferrer">
+
+            ↗ Get directions
+
+          </a>
+
+        </div>
+
+
+        <div class="branch">
+
+          <h4>
+            Dattapara Campus
+          </h4>
+
+
+          <p>
+            Bonomala Road, BIS Point, Dattapara, Tongi, Gazipur-1712
+          </p>
+
+
+          <a href="https://maps.google.com/maps?q=23.9111391,90.4031693" target="_blank" rel="noopener noreferrer">
+
+            ↗ Get directions
+
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- CONTACT -->
+
+      <div class="footer-column">
+
+        <h3>
+          Contact Us
+        </h3>
+
+
+        <p>
+          Get directions, campus information, and school contact details.
+        </p>
+
+
+        <a href="contact.html">
+          Visit Contact &amp; Campus Maps →
+        </a>
+
+      </div>
+
 
     </div>
 
-    <!-- Copyright -->
+
+    <!-- COPYRIGHT -->
+
     <div class="footer-bottom">
-      <p>
-        &copy; <span id="footer-year"></span>
-        Benchmark International School. All rights reserved.
-      </p>
+
+      <div class="container footer-bottom-inner">
+
+        <p>
+          ©
+          <span id="footerYear">
+            2026
+          </span>
+          Benchmark International School.
+          All rights reserved.
+        </p>
+
+
+        <p>
+          Learn · Grow · Lead
+        </p>
+
+      </div>
+
     </div>
+
+
   </footer>
 
+
+  <!-- =====================================================
+       JAVASCRIPT
+  ===================================================== -->
+
   <script>
-    document.getElementById("footer-year").textContent =
+
+    const menuButton =
+      document.getElementById("menuButton");
+
+    const navigation =
+      document.getElementById("navigation");
+
+
+    menuButton.addEventListener("click", function () {
+
+      const isOpen =
+        navigation.classList.toggle("show");
+
+
+      menuButton.setAttribute(
+        "aria-expanded",
+        isOpen
+      );
+
+    });
+
+
+    /* Close mobile menu after clicking a link */
+
+    document
+      .querySelectorAll(".navigation a")
+      .forEach(function (link) {
+
+        link.addEventListener("click", function () {
+
+          navigation.classList.remove("show");
+
+          menuButton.setAttribute(
+            "aria-expanded",
+            "false"
+          );
+
+        });
+
+      });
+
+
+    /* Current year */
+
+    document.getElementById("footerYear").textContent =
       new Date().getFullYear();
+
   </script>
-  <script>
-    const toggle = document.querySelector('.nav-toggle'), nav = document.querySelector('.nav-links');
-    toggle.addEventListener('click', () => { const open = toggle.getAttribute('aria-expanded') !== 'true'; toggle.setAttribute('aria-expanded', String(open)); nav.classList.toggle('open', open); });
-  </script>
+
+
 </body>
 
 </html>
