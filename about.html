@@ -2,17 +2,30 @@
 <html lang="en">
 
 <head>
+
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0">
 
   <title>About Us | Benchmark International School</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com">
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin>
+
 
   <link
     href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
     rel="stylesheet">
+
 
   <style>
 
@@ -26,27 +39,36 @@
       box-sizing: border-box;
     }
 
+
     html {
       scroll-behavior: smooth;
     }
 
+
     body {
       width: 100%;
       overflow-x: hidden;
+
       background: #f8faf9;
+
       color: #20343a;
+
       font-family: "DM Sans", sans-serif;
+
       line-height: 1.7;
     }
+
 
     img {
       max-width: 100%;
     }
 
+
     a {
       text-decoration: none;
       color: inherit;
     }
+
 
     button {
       font: inherit;
@@ -58,15 +80,21 @@
     ===================================================== */
 
     :root {
+
       --primary: #286d78;
+
       --primary-dark: #1e5963;
+
       --accent: #c9a65b;
 
       --dark: #1d3035;
+
       --text: #33474d;
+
       --muted: #6d7c81;
 
       --light: #eef5f4;
+
       --white: #ffffff;
 
       --border: #dce7e5;
@@ -74,6 +102,7 @@
       --radius: 18px;
 
       --container: 1180px;
+
     }
 
 
@@ -82,10 +111,14 @@
     ===================================================== */
 
     .container {
-      width: min(var(--container),
-          calc(100% - 40px));
+
+      width: min(
+        var(--container),
+        calc(100% - 40px)
+      );
 
       margin: auto;
+
     }
 
 
@@ -94,23 +127,35 @@
     ===================================================== */
 
     .top-bar {
+
       background: var(--dark);
+
       color: #dce7e9;
+
       font-size: 13px;
+
     }
 
+
     .top-bar-inner {
+
       min-height: 38px;
 
       display: flex;
+
       align-items: center;
+
       justify-content: space-between;
 
       gap: 20px;
+
     }
 
+
     .top-bar span {
+
       white-space: nowrap;
+
     }
 
 
@@ -119,58 +164,107 @@
     ===================================================== */
 
     .header {
+
       position: sticky;
+
       top: 0;
+
       z-index: 1000;
 
       background: rgba(255, 255, 255, .96);
 
       backdrop-filter: blur(14px);
 
-      border-bottom: 1px solid rgba(32, 52, 58, .08);
+      border-bottom:
+        1px solid rgba(32, 52, 58, .08);
+
     }
 
+
     .header-inner {
+
       min-height: 76px;
 
       display: flex;
+
       align-items: center;
 
       gap: 35px;
+
     }
 
 
-    /* LOGO */
+    /* =====================================================
+       LOGO
+    ===================================================== */
 
     .logo {
+
       display: flex;
+
       align-items: center;
 
       gap: 11px;
 
       flex-shrink: 0;
+
+      min-width: 0;
+
     }
 
-    .logo img {
+
+    .logo > img {
+
       width: 47px;
+
       height: 47px;
 
       object-fit: contain;
+
+      flex-shrink: 0;
+
     }
+
 
     .logo-text {
-      font-family: "Manrope", sans-serif;
 
-      font-size: 16px;
-      font-weight: 800;
+      display: flex;
 
-      line-height: 1.15;
+      flex-direction: column;
+
+      align-items: flex-start;
+
+      justify-content: center;
+
+      min-width: 0;
+
+      line-height: 1;
+
     }
 
-    .logo-text small {
+
+    /* SCHOOL NAME IMAGE */
+
+    .school-name-image {
+
       display: block;
 
-      margin-top: 4px;
+      width: 285px;
+
+      height: auto;
+
+      max-width: 100%;
+
+      object-fit: contain;
+
+    }
+
+
+    .logo-text small {
+
+      display: block;
+
+      margin-top: 5px;
 
       color: var(--primary);
 
@@ -183,21 +277,29 @@
       letter-spacing: .14em;
 
       text-transform: uppercase;
+
     }
 
 
-    /* NAVIGATION */
+    /* =====================================================
+       NAVIGATION
+    ===================================================== */
 
     .navigation {
+
       margin-left: auto;
 
       display: flex;
+
       align-items: center;
 
       gap: 4px;
+
     }
 
+
     .navigation a {
+
       padding: 10px 13px;
 
       border-radius: 8px;
@@ -209,25 +311,35 @@
       font-weight: 700;
 
       transition: .2s ease;
+
     }
 
+
     .navigation a:hover,
+
     .navigation a.active {
+
       color: var(--primary);
 
       background: #edf5f4;
+
     }
 
 
-    /* MOBILE BUTTON */
+    /* =====================================================
+       MOBILE BUTTON
+    ===================================================== */
 
     .menu-button {
+
       display: none;
 
       width: 42px;
+
       height: 42px;
 
-      border: 1px solid var(--border);
+      border:
+        1px solid var(--border);
 
       background: #fff;
 
@@ -238,6 +350,7 @@
       color: var(--dark);
 
       font-size: 21px;
+
     }
 
 
@@ -246,44 +359,59 @@
     ===================================================== */
 
     .hero {
+
       position: relative;
 
       overflow: hidden;
 
       background:
-        linear-gradient(135deg,
+        linear-gradient(
+          135deg,
           #edf5f4 0%,
           #f8faf9 55%,
-          #e7f0ef 100%);
+          #e7f0ef 100%
+        );
 
-      border-bottom: 1px solid var(--border);
+      border-bottom:
+        1px solid var(--border);
+
     }
 
+
     .hero-inner {
+
       min-height: 470px;
 
       display: grid;
 
       grid-template-columns:
-        minmax(0, 1.15fr) minmax(300px, .85fr);
+        minmax(0, 1.15fr)
+        minmax(300px, .85fr);
 
       align-items: center;
 
       gap: 70px;
 
       padding-top: 65px;
+
       padding-bottom: 65px;
+
     }
 
 
     /* HERO TEXT */
 
     .hero-content {
+
       position: relative;
+
       z-index: 2;
+
     }
 
+
     .hero-label {
+
       display: inline-flex;
 
       align-items: center;
@@ -299,27 +427,33 @@
       letter-spacing: .14em;
 
       text-transform: uppercase;
+
     }
 
+
     .hero-label::before {
+
       content: "";
 
       width: 28px;
+
       height: 2px;
 
       background: var(--accent);
+
     }
 
+
     .hero h1 {
+
       margin-top: 18px;
 
       max-width: 700px;
 
       font-family: "Manrope", sans-serif;
 
-      font-size: clamp(2.4rem,
-          5vw,
-          4.5rem);
+      font-size:
+        clamp(2.4rem, 5vw, 4.5rem);
 
       line-height: 1.04;
 
@@ -328,13 +462,19 @@
       font-weight: 800;
 
       color: var(--dark);
+
     }
+
 
     .hero h1 span {
+
       color: var(--primary);
+
     }
 
+
     .hero-description {
+
       max-width: 650px;
 
       margin-top: 22px;
@@ -342,12 +482,14 @@
       color: var(--muted);
 
       font-size: 17px;
+
     }
 
 
     /* HERO SIDE */
 
     .hero-card {
+
       position: relative;
 
       min-height: 315px;
@@ -355,24 +497,30 @@
       display: flex;
 
       align-items: center;
+
       justify-content: center;
 
       background: var(--white);
 
-      border: 1px solid var(--border);
+      border:
+        1px solid var(--border);
 
       border-radius: 24px;
 
       box-shadow:
         0 25px 60px rgba(31, 67, 73, .10);
+
     }
 
+
     .hero-card::before {
+
       content: "";
 
       position: absolute;
 
       width: 180px;
+
       height: 180px;
 
       border-radius: 50%;
@@ -380,42 +528,60 @@
       background: #e8f1ef;
 
       top: -50px;
+
       right: -45px;
+
     }
 
+
     .hero-card::after {
+
       content: "";
 
       position: absolute;
 
       width: 120px;
+
       height: 120px;
 
       border-radius: 50%;
 
-      border: 18px solid rgba(201, 166, 91, .15);
+      border:
+        18px solid rgba(201, 166, 91, .15);
 
       left: -38px;
+
       bottom: -35px;
+
     }
 
+
     .hero-card-content {
+
       position: relative;
+
       z-index: 2;
 
       text-align: center;
 
       padding: 30px;
+
     }
 
+
     .hero-card img {
+
       width: 165px;
+
       height: 165px;
 
       object-fit: contain;
+
     }
 
+
     .hero-card-title {
+
       margin-top: 15px;
 
       font-family: "Manrope", sans-serif;
@@ -423,9 +589,12 @@
       font-size: 16px;
 
       font-weight: 800;
+
     }
 
+
     .hero-card-subtitle {
+
       color: var(--primary);
 
       font-size: 12px;
@@ -435,6 +604,7 @@
       letter-spacing: .08em;
 
       text-transform: uppercase;
+
     }
 
 
@@ -443,24 +613,29 @@
     ===================================================== */
 
     .about {
+
       padding: 100px 0;
+
     }
 
+
     .about-grid {
+
       display: grid;
 
       grid-template-columns:
-        minmax(0, .82fr) minmax(0, 1.18fr);
+        minmax(0, .82fr)
+        minmax(0, 1.18fr);
 
       gap: 80px;
 
       align-items: start;
+
     }
 
 
-    /* LEFT */
-
     .section-label {
+
       display: inline-block;
 
       color: var(--primary);
@@ -472,16 +647,18 @@
       letter-spacing: .14em;
 
       text-transform: uppercase;
+
     }
 
+
     .section-title {
+
       margin-top: 12px;
 
       font-family: "Manrope", sans-serif;
 
-      font-size: clamp(2rem,
-          4vw,
-          3.15rem);
+      font-size:
+        clamp(2rem, 4vw, 3.15rem);
 
       line-height: 1.12;
 
@@ -490,31 +667,44 @@
       font-weight: 800;
 
       color: var(--dark);
+
     }
 
 
     /* ABOUT TEXT */
 
     .about-text {
-      border-left: 3px solid var(--accent);
+
+      border-left:
+        3px solid var(--accent);
 
       padding-left: 28px;
+
     }
 
+
     .about-text p {
+
       color: var(--text);
 
       font-size: 16px;
 
       margin-bottom: 20px;
+
     }
+
 
     .about-text p:last-child {
+
       margin-bottom: 0;
+
     }
 
+
     .about-text strong {
+
       color: var(--primary-dark);
+
     }
 
 
@@ -523,41 +713,54 @@
     ===================================================== */
 
     .direction {
+
       padding: 95px 0;
 
       background: var(--light);
+
     }
 
+
     .section-intro {
+
       max-width: 680px;
 
       margin-bottom: 45px;
+
     }
 
+
     .section-intro p {
+
       margin-top: 15px;
 
       color: var(--muted);
+
     }
 
 
     .direction-grid {
+
       display: grid;
 
       grid-template-columns:
         repeat(2, minmax(0, 1fr));
 
       gap: 22px;
+
     }
 
+
     .direction-card {
+
       position: relative;
 
       overflow: hidden;
 
       background: var(--white);
 
-      border: 1px solid var(--border);
+      border:
+        1px solid var(--border);
 
       border-radius: var(--radius);
 
@@ -568,16 +771,22 @@
       transition:
         transform .3s ease,
         box-shadow .3s ease;
+
     }
 
+
     .direction-card:hover {
+
       transform: translateY(-5px);
 
       box-shadow:
         0 20px 45px rgba(31, 67, 73, .10);
+
     }
 
+
     .direction-number {
+
       font-family: "Manrope", sans-serif;
 
       font-size: 70px;
@@ -591,11 +800,16 @@
       position: absolute;
 
       right: 22px;
+
       top: 12px;
+
     }
 
+
     .direction-tag {
+
       position: relative;
+
       z-index: 2;
 
       display: inline-block;
@@ -615,10 +829,14 @@
       letter-spacing: .1em;
 
       text-transform: uppercase;
+
     }
 
+
     .direction-card h3 {
+
       position: relative;
+
       z-index: 2;
 
       margin-top: 25px;
@@ -632,15 +850,20 @@
       font-weight: 800;
 
       color: var(--dark);
+
     }
 
+
     .direction-card p {
+
       position: relative;
+
       z-index: 2;
 
       margin-top: 14px;
 
       color: var(--muted);
+
     }
 
 
@@ -649,10 +872,14 @@
     ===================================================== */
 
     .facilities {
+
       padding: 100px 0;
+
     }
 
+
     .facilities-heading {
+
       display: flex;
 
       align-items: end;
@@ -662,45 +889,60 @@
       gap: 30px;
 
       margin-bottom: 42px;
+
     }
 
+
     .facilities-heading p {
+
       max-width: 450px;
 
       color: var(--muted);
+
     }
 
 
     .facility-grid {
+
       display: grid;
 
       grid-template-columns:
         repeat(4, minmax(0, 1fr));
 
       gap: 16px;
+
     }
 
+
     .facility-card {
+
       padding: 28px 23px;
 
       background: var(--white);
 
-      border: 1px solid var(--border);
+      border:
+        1px solid var(--border);
 
       border-radius: 14px;
 
       transition:
         transform .25s ease,
         border-color .25s ease;
+
     }
 
+
     .facility-card:hover {
+
       transform: translateY(-4px);
 
       border-color: #b7d0cc;
+
     }
 
+
     .facility-number {
+
       color: var(--accent);
 
       font-family: "Manrope", sans-serif;
@@ -708,9 +950,12 @@
       font-size: 13px;
 
       font-weight: 800;
+
     }
 
+
     .facility-card h3 {
+
       margin-top: 25px;
 
       font-family: "Manrope", sans-serif;
@@ -718,14 +963,18 @@
       font-size: 17px;
 
       font-weight: 800;
+
     }
 
+
     .facility-card p {
+
       margin-top: 8px;
 
       color: var(--muted);
 
       font-size: 14px;
+
     }
 
 
@@ -734,36 +983,48 @@
     ===================================================== */
 
     .gallery-section {
+
       padding: 95px 0;
 
       background: #f0f5f4;
+
     }
 
+
     .gallery-heading {
+
       text-align: center;
 
       max-width: 650px;
 
       margin: 0 auto 42px;
+
     }
 
+
     .gallery-heading p {
+
       margin-top: 13px;
 
       color: var(--muted);
+
     }
 
 
     .school-gallery {
+
       display: grid;
 
       grid-template-columns:
         repeat(3, minmax(0, 1fr));
 
       gap: 20px;
+
     }
 
+
     .gallery-card {
+
       position: relative;
 
       overflow: hidden;
@@ -776,16 +1037,21 @@
 
       border-radius: 16px;
 
-      border: 1px solid var(--border);
+      border:
+        1px solid var(--border);
 
       box-shadow:
         0 8px 25px rgba(31, 67, 73, .06);
 
-      cursor: pointer;
+      cursor: zoom-in;
+
     }
 
+
     .gallery-card img {
+
       width: 100%;
+
       height: 100%;
 
       object-fit: contain;
@@ -795,13 +1061,18 @@
       transition:
         transform .45s ease,
         filter .35s ease;
+
     }
 
+
     .gallery-overlay {
+
       position: absolute;
 
       left: 0;
+
       right: 0;
+
       bottom: 0;
 
       min-height: 105px;
@@ -814,63 +1085,84 @@
 
       gap: 12px;
 
-      padding: 45px 18px 17px;
+      padding:
+        45px 18px 17px;
 
       background:
-        linear-gradient(to top,
+        linear-gradient(
+          to top,
           rgba(0, 0, 0, .92),
           rgba(0, 0, 0, .60) 38%,
-          transparent);
+          transparent
+        );
 
       color: #fff;
 
       pointer-events: none;
+
     }
 
+
     .gallery-overlay strong {
+
       font-family: "Manrope", sans-serif;
 
       font-size: 15px;
 
       font-weight: 800;
+
     }
 
+
     .gallery-arrow {
+
       width: 31px;
+
       height: 31px;
 
       display: grid;
+
       place-items: center;
 
       border-radius: 50%;
 
-      background: rgba(255, 255, 255, .14);
+      background:
+        rgba(255, 255, 255, .14);
 
-      border: 1px solid rgba(255, 255, 255, .25);
+      border:
+        1px solid rgba(255, 255, 255, .25);
 
       flex-shrink: 0;
+
     }
 
+
     .gallery-card:hover img {
+
       transform: scale(1.025);
 
       filter: brightness(.92);
+
     }
 
 
     /* =====================================================
-       VIEW MORE GALLERY BUTTON
+       VIEW MORE
     ===================================================== */
 
     .gallery-view-more {
+
       display: flex;
 
       justify-content: center;
 
       margin-top: 38px;
+
     }
 
+
     .gallery-view-more a {
+
       display: inline-flex;
 
       align-items: center;
@@ -879,13 +1171,14 @@
 
       padding: 13px 22px;
 
-      border: 1px solid #286d78;
+      border:
+        1px solid var(--primary);
 
       border-radius: 8px;
 
-      background: #286d78;
+      background: var(--primary);
 
-      color: #ffffff;
+      color: #fff;
 
       font-family: "Manrope", sans-serif;
 
@@ -897,35 +1190,47 @@
         background .25s ease,
         transform .25s ease,
         box-shadow .25s ease;
+
     }
 
+
     .gallery-view-more a span {
+
       font-size: 18px;
 
       line-height: 1;
 
-      transition: transform .25s ease;
+      transition:
+        transform .25s ease;
+
     }
 
+
     .gallery-view-more a:hover {
-      background: #1e5963;
+
+      background: var(--primary-dark);
 
       transform: translateY(-3px);
 
       box-shadow:
         0 10px 25px rgba(40, 109, 120, .18);
+
     }
 
+
     .gallery-view-more a:hover span {
+
       transform: translateX(4px);
+
     }
 
 
     /* =====================================================
-       GALLERY LIGHTBOX
+       IMAGE LIGHTBOX
     ===================================================== */
 
-    .gallery-lightbox {
+    .lightbox {
+
       position: fixed;
 
       inset: 0;
@@ -938,26 +1243,55 @@
 
       justify-content: center;
 
-      padding: 30px;
+      padding: 35px;
 
-      background: rgba(10, 18, 20, .94);
+      background:
+        rgba(8, 16, 18, .94);
+
+      backdrop-filter: blur(8px);
 
       opacity: 0;
 
       transition: opacity .25s ease;
+
     }
 
-    .gallery-lightbox.show {
+
+    .lightbox.show {
+
       display: flex;
 
       opacity: 1;
+
+    }
+
+
+    .lightbox-content {
+
+      position: relative;
+
+      width: 100%;
+
+      height: 100%;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      overflow: hidden;
+
+      touch-action: none;
+
     }
 
 
     .lightbox-image {
+
       max-width: 92vw;
 
-      max-height: 90vh;
+      max-height: 88vh;
 
       width: auto;
 
@@ -965,41 +1299,35 @@
 
       object-fit: contain;
 
-      display: block;
-
-      border-radius: 8px;
-
-      box-shadow:
-        0 20px 70px rgba(0, 0, 0, .45);
-
       user-select: none;
 
       -webkit-user-drag: none;
 
-      animation: lightboxImage .25s ease;
-    }
+      cursor: zoom-in;
 
+      transform-origin: center center;
 
-    @keyframes lightboxImage {
-
-      from {
-        opacity: 0;
-
-        transform: scale(.96);
-      }
-
-      to {
-        opacity: 1;
-
-        transform: scale(1);
-      }
+      will-change: transform;
 
     }
 
 
-    /* CLOSE BUTTON */
+    .lightbox-image.zoomed {
+
+      cursor: grab;
+
+    }
+
+
+    .lightbox-image.zoomed:active {
+
+      cursor: grabbing;
+
+    }
+
 
     .lightbox-close {
+
       position: fixed;
 
       top: 20px;
@@ -1008,23 +1336,24 @@
 
       z-index: 10001;
 
-      width: 45px;
+      width: 46px;
 
-      height: 45px;
+      height: 46px;
 
       display: grid;
 
       place-items: center;
 
-      border: 1px solid rgba(255, 255, 255, .25);
+      border: 1px solid rgba(255,255,255,.25);
 
       border-radius: 50%;
 
-      background: rgba(0, 0, 0, .45);
+      background:
+        rgba(255,255,255,.10);
 
       color: #fff;
 
-      font-size: 28px;
+      font-size: 27px;
 
       line-height: 1;
 
@@ -1033,45 +1362,17 @@
       transition:
         background .2s ease,
         transform .2s ease;
+
     }
+
 
     .lightbox-close:hover {
-      background: rgba(255, 255, 255, .15);
 
-      transform: scale(1.05);
-    }
+      background:
+        rgba(255,255,255,.20);
 
+      transform: rotate(90deg);
 
-    /* LIGHTBOX CAPTION */
-
-    .lightbox-caption {
-      position: fixed;
-
-      left: 50%;
-
-      bottom: 25px;
-
-      z-index: 10001;
-
-      transform: translateX(-50%);
-
-      max-width: calc(100% - 40px);
-
-      padding: 10px 17px;
-
-      border-radius: 8px;
-
-      background: rgba(0, 0, 0, .65);
-
-      color: #fff;
-
-      font-family: "Manrope", sans-serif;
-
-      font-size: 13px;
-
-      font-weight: 700;
-
-      text-align: center;
     }
 
 
@@ -1080,14 +1381,18 @@
     ===================================================== */
 
     .footer {
+
       background: #1d3035;
 
       color: #fff;
 
       padding-top: 65px;
+
     }
 
+
     .footer-grid {
+
       display: grid;
 
       grid-template-columns:
@@ -1096,35 +1401,47 @@
       gap: 45px;
 
       padding-bottom: 55px;
+
     }
 
 
     .footer-brand {
+
       display: flex;
 
       align-items: flex-start;
 
       gap: 13px;
+
     }
 
+
     .footer-brand img {
+
       width: 50px;
+
       height: 50px;
 
       object-fit: contain;
 
       flex-shrink: 0;
+
     }
 
+
     .footer-brand h2 {
+
       font-family: "Manrope", sans-serif;
 
       font-size: 17px;
 
       line-height: 1.25;
+
     }
 
+
     .footer-brand p {
+
       margin-top: 10px;
 
       color: #b9c9cc;
@@ -1132,10 +1449,12 @@
       font-size: 13px;
 
       max-width: 250px;
+
     }
 
 
     .footer-column h3 {
+
       font-family: "Manrope", sans-serif;
 
       font-size: 14px;
@@ -1143,9 +1462,12 @@
       margin-bottom: 19px;
 
       color: #fff;
+
     }
 
+
     .footer-column a {
+
       display: block;
 
       width: fit-content;
@@ -1157,58 +1479,82 @@
       font-size: 13px;
 
       transition: .2s;
+
     }
 
+
     .footer-column a:hover {
+
       color: #fff;
 
       transform: translateX(3px);
+
     }
 
 
     .footer-column p {
+
       color: #b9c9cc;
 
       font-size: 13px;
 
       line-height: 1.65;
+
     }
+
 
     .branch {
+
       margin-bottom: 17px;
+
     }
 
+
     .branch h4 {
+
       font-size: 13px;
 
       color: #fff;
 
       margin-bottom: 3px;
+
     }
 
+
     .branch p {
+
       margin-bottom: 5px;
+
     }
 
 
     .footer-bottom {
-      border-top: 1px solid rgba(255, 255, 255, .10);
+
+      border-top:
+        1px solid rgba(255, 255, 255, .10);
 
       padding: 19px 0;
+
     }
 
+
     .footer-bottom-inner {
+
       display: flex;
 
       justify-content: space-between;
 
       gap: 15px;
+
     }
 
+
     .footer-bottom p {
+
       color: #9eb1b5;
 
       font-size: 12px;
+
     }
 
 
@@ -1219,42 +1565,62 @@
     @media (max-width: 1000px) {
 
       .hero-inner {
+
         grid-template-columns: 1fr;
 
         gap: 45px;
+
       }
 
+
       .hero-card {
+
         max-width: 480px;
 
         width: 100%;
 
         margin: auto;
+
       }
 
+
       .about-grid {
+
         grid-template-columns: 1fr;
 
         gap: 45px;
+
       }
+
 
       .about-text {
+
         max-width: 850px;
+
       }
+
 
       .facility-grid {
+
         grid-template-columns:
           repeat(2, minmax(0, 1fr));
+
       }
+
 
       .school-gallery {
+
         grid-template-columns:
           repeat(2, minmax(0, 1fr));
+
       }
 
+
       .footer-grid {
+
         grid-template-columns:
           repeat(2, minmax(0, 1fr));
+
       }
 
     }
@@ -1267,53 +1633,89 @@
     @media (max-width: 760px) {
 
       .container {
+
         width: calc(100% - 30px);
+
       }
 
 
       /* TOP BAR */
 
       .top-bar-inner {
+
         justify-content: center;
 
         min-height: 34px;
+
       }
 
+
       .top-bar span:last-child {
+
         display: none;
+
       }
 
 
       /* HEADER */
 
       .header-inner {
+
         min-height: 68px;
 
         flex-wrap: wrap;
 
         gap: 10px;
+
       }
 
-      .logo img {
+
+      .logo {
+
+        max-width:
+          calc(100% - 52px);
+
+      }
+
+
+      .logo > img {
+
         width: 41px;
+
         height: 41px;
+
       }
 
-      .logo-text {
-        font-size: 14px;
+
+      .school-name-image {
+
+        width: 210px;
+
       }
+
 
       .logo-text small {
+
         font-size: 8px;
+
+        margin-top: 4px;
+
       }
 
+
       .menu-button {
+
         display: block;
 
         margin-left: auto;
+
+        flex-shrink: 0;
+
       }
 
+
       .navigation {
+
         display: none;
 
         width: 100%;
@@ -1325,150 +1727,221 @@
         align-items: stretch;
 
         padding: 5px 0 12px;
+
       }
+
 
       .navigation.show {
+
         display: flex;
+
       }
 
+
       .navigation a {
+
         padding: 11px 12px;
+
       }
 
 
       /* HERO */
 
       .hero-inner {
+
         min-height: auto;
 
         padding-top: 55px;
+
         padding-bottom: 55px;
 
         gap: 35px;
+
       }
+
 
       .hero h1 {
-        font-size: clamp(2.35rem,
-            11vw,
-            3.4rem);
+
+        font-size:
+          clamp(2.35rem, 11vw, 3.4rem);
+
       }
+
 
       .hero-description {
+
         font-size: 15px;
+
       }
+
 
       .hero-card {
+
         min-height: 260px;
+
       }
 
+
       .hero-card img {
+
         width: 135px;
+
         height: 135px;
+
       }
 
 
       /* ABOUT */
 
       .about {
+
         padding: 65px 0;
+
       }
+
 
       .about-grid {
+
         gap: 35px;
+
       }
+
 
       .about-text {
+
         padding-left: 19px;
+
       }
 
+
       .about-text p {
+
         font-size: 15px;
+
       }
 
 
       /* DIRECTION */
 
       .direction {
+
         padding: 65px 0;
+
       }
+
 
       .direction-grid {
+
         grid-template-columns: 1fr;
+
       }
 
+
       .direction-card {
+
         min-height: auto;
 
         padding: 28px;
+
       }
 
 
       /* FACILITIES */
 
       .facilities {
+
         padding: 65px 0;
+
       }
 
+
       .facilities-heading {
+
         display: block;
 
         margin-bottom: 30px;
+
       }
+
 
       .facilities-heading p {
+
         margin-top: 12px;
+
       }
 
+
       .facility-grid {
+
         grid-template-columns: 1fr;
+
       }
 
 
       /* GALLERY */
 
       .gallery-section {
+
         padding: 65px 0;
+
       }
 
+
       .school-gallery {
+
         grid-template-columns: 1fr;
 
         gap: 17px;
+
       }
 
+
       .gallery-card {
+
         aspect-ratio: 16 / 10;
 
         border-radius: 13px;
+
       }
 
+
       .gallery-overlay {
+
         min-height: 90px;
 
         padding:
           40px 15px 14px;
+
       }
 
+
       .gallery-overlay strong {
+
         font-size: 13px;
+
       }
 
 
       /* LIGHTBOX */
 
-      .gallery-lightbox {
+      .lightbox {
+
         padding: 15px;
+
       }
+
 
       .lightbox-image {
+
         max-width: 96vw;
 
-        max-height: 84vh;
+        max-height: 86vh;
 
-        border-radius: 5px;
       }
 
+
       .lightbox-close {
+
         top: 12px;
 
         right: 12px;
@@ -1477,38 +1950,37 @@
 
         height: 42px;
 
-        font-size: 25px;
-      }
+        font-size: 24px;
 
-      .lightbox-caption {
-        bottom: 15px;
-
-        max-width: calc(100% - 30px);
-
-        font-size: 12px;
-
-        padding: 9px 13px;
       }
 
 
       /* FOOTER */
 
       .footer {
+
         padding-top: 48px;
+
       }
 
+
       .footer-grid {
+
         grid-template-columns: 1fr;
 
         gap: 34px;
 
         padding-bottom: 42px;
+
       }
 
+
       .footer-bottom-inner {
+
         flex-direction: column;
 
         align-items: flex-start;
+
       }
 
     }
@@ -1520,20 +1992,38 @@
 
     @media (max-width: 430px) {
 
-      .hero h1 {
-        font-size: 2.3rem;
+      .school-name-image {
+
+        width: 185px;
+
       }
+
+
+      .hero h1 {
+
+        font-size: 2.3rem;
+
+      }
+
 
       .section-title {
+
         font-size: 2rem;
+
       }
+
 
       .direction-card {
+
         padding: 24px;
+
       }
 
+
       .gallery-card {
+
         aspect-ratio: 16 / 10;
+
       }
 
     }
@@ -1543,30 +2033,32 @@
        PHONE LANDSCAPE
     ===================================================== */
 
-    @media (max-width: 950px) and
-           (max-height: 500px) and
-           (orientation: landscape) {
+    @media (max-width: 950px)
+      and (max-height: 500px)
+      and (orientation: landscape) {
 
       .school-gallery {
+
         grid-template-columns:
           repeat(2, minmax(0, 1fr));
+
       }
 
+
       .hero-inner {
+
         grid-template-columns:
           1.1fr .9fr;
 
         min-height: 400px;
+
       }
+
 
       .hero-card {
+
         min-height: 270px;
-      }
 
-      .lightbox-image {
-        max-width: 88vw;
-
-        max-height: 86vh;
       }
 
     }
@@ -1581,11 +2073,13 @@
       *,
       *::before,
       *::after {
+
         animation: none !important;
 
         transition: none !important;
 
         scroll-behavior: auto !important;
+
       }
 
     }
@@ -1610,6 +2104,7 @@
         Benchmark International School · Tongi, Gazipur
       </span>
 
+
       <span>
         Quality education · Character · Leadership
       </span>
@@ -1628,26 +2123,40 @@
     <div class="container header-inner">
 
 
-      <a href="index.html"
+      <a
+        href="index.html"
         class="logo"
         aria-label="Benchmark International School Home">
 
+
+        <!-- SCHOOL LOGO -->
+
         <img
-          src="images/lol-removebg-preview-removebg-preview.png"
+          src="images/lol-removebg-preview-removebg-preview.png" 
           alt="Benchmark International School Logo">
+
+
+        <!-- SCHOOL NAME IMAGE -->
 
         <span class="logo-text">
 
-          Benchmark International School
+          <img
+            src="images/header-removebg-preview.png"
+            alt="Benchmark International School"
+            class="school-name-image">
 
-          <small>
+
+          <!-- <small>
             Learn · Grow · Lead
-          </small>
+          </small> -->
 
         </span>
 
+
       </a>
 
+
+      <!-- MOBILE MENU -->
 
       <button
         class="menu-button"
@@ -1660,14 +2169,18 @@
       </button>
 
 
+      <!-- NAVIGATION -->
+
       <nav
         class="navigation"
         id="navigation"
         aria-label="Main navigation">
 
+
         <a href="index.html">
           Home
         </a>
+
 
         <a
           href="about.html"
@@ -1678,17 +2191,21 @@
 
         </a>
 
+
         <a href="admission.html">
           Admission
         </a>
+
 
         <a href="contact.html">
           Contact
         </a>
 
+
         <a href="index.html#management">
           School Management
         </a>
+
 
       </nav>
 
@@ -1722,9 +2239,15 @@
 
 
           <h1>
+
             About
-            <span>Benchmark</span>
+
+            <span>
+              Benchmark
+            </span>
+
             International School
+
           </h1>
 
 
@@ -1740,21 +2263,27 @@
 
         <div class="hero-card">
 
+
           <div class="hero-card-content">
+
 
             <img
               src="images/mm-removebg-preview.png"
               alt="Benchmark International School emblem">
 
+
             <div class="hero-card-title">
               Benchmark International School
             </div>
+
 
             <div class="hero-card-subtitle">
               Learn · Grow · Lead
             </div>
 
+
           </div>
+
 
         </div>
 
@@ -1781,14 +2310,17 @@
 
 
           <h2 class="section-title">
+
             Education for learning,
             character and confidence.
+
           </h2>
 
         </div>
 
 
         <div class="about-text">
+
 
           <p>
 
@@ -1808,14 +2340,19 @@
           <p>
 
             The institution offers education from
+
             <strong>
               Playgroup to Secondary School Certificate (SSC)
             </strong>
+
             level. The school follows the
+
             <strong>
               National Curriculum of Bangladesh
             </strong>
+
             and provides instruction in both
+
             <strong>
               Bangla and English mediums
             </strong>.
@@ -1833,6 +2370,7 @@
             sports, debates, and creative competitions.
 
           </p>
+
 
         </div>
 
@@ -1853,6 +2391,7 @@
 
         <div class="section-intro">
 
+
           <span class="section-label">
             Our direction
           </span>
@@ -1867,6 +2406,7 @@
             The purpose and ambition that shape our approach to education.
           </p>
 
+
         </div>
 
 
@@ -1876,6 +2416,7 @@
           <!-- MISSION -->
 
           <article class="direction-card">
+
 
             <span class="direction-number">
               01
@@ -1900,12 +2441,14 @@
 
             </p>
 
+
           </article>
 
 
           <!-- VISION -->
 
           <article class="direction-card">
+
 
             <span class="direction-number">
               02
@@ -1930,10 +2473,12 @@
 
             </p>
 
+
           </article>
 
 
         </div>
+
 
       </div>
 
@@ -1951,7 +2496,9 @@
 
         <div class="facilities-heading">
 
+
           <div>
+
 
             <span class="section-label">
               Learning environment
@@ -1962,6 +2509,7 @@
               School Facilities
             </h2>
 
+
           </div>
 
 
@@ -1969,6 +2517,7 @@
             An environment designed to support learning,
             participation, confidence and development.
           </p>
+
 
         </div>
 
@@ -1992,6 +2541,7 @@
               Activity-based learning and updated teaching methods.
             </p>
 
+
           </article>
 
 
@@ -2010,6 +2560,7 @@
             <p>
               Skilled and committed teachers.
             </p>
+
 
           </article>
 
@@ -2030,6 +2581,7 @@
               Sports, cultural events, debates, and competitions.
             </p>
 
+
           </article>
 
 
@@ -2049,10 +2601,12 @@
               Comfortable classrooms for better learning environment.
             </p>
 
+
           </article>
 
 
         </div>
+
 
       </div>
 
@@ -2070,6 +2624,7 @@
 
         <div class="gallery-heading">
 
+
           <span class="section-label">
             School moments
           </span>
@@ -2081,9 +2636,12 @@
 
 
           <p>
+
             Explore moments from Benchmark International School.
             More school photos can be added anytime.
+
           </p>
+
 
         </div>
 
@@ -2096,26 +2654,31 @@
           <a
             href="images/orientation day.jpg"
             class="gallery-card"
-            data-gallery
-            data-title="Orientation Day (Dattapara Campus)">
+            data-gallery="school-gallery"
+            aria-label="Open Orientation Day photo">
+
 
             <img
               src="images/orientation day.jpg"
-              alt="Benchmark International School campus"
+              alt="Orientation Day at Dattapara Campus"
               loading="lazy">
 
 
             <div class="gallery-overlay">
 
+
               <strong>
                 Orientation Day (Dattapara Campus)
               </strong>
+
 
               <span class="gallery-arrow">
                 ↗
               </span>
 
+
             </div>
+
 
           </a>
 
@@ -2125,26 +2688,31 @@
           <a
             href="images/orientation day auch.jpg"
             class="gallery-card"
-            data-gallery
-            data-title="Orientation Day (Auchpara Campus)">
+            data-gallery="school-gallery"
+            aria-label="Open Orientation Day photo">
+
 
             <img
               src="images/orientation day auch.jpg"
-              alt="Benchmark International School school life"
+              alt="Orientation Day at Auchpara Campus"
               loading="lazy">
 
 
             <div class="gallery-overlay">
 
+
               <strong>
                 Orientation Day (Auchpara Campus)
               </strong>
+
 
               <span class="gallery-arrow">
                 ↗
               </span>
 
+
             </div>
+
 
           </a>
 
@@ -2154,26 +2722,31 @@
           <a
             href="images/pohela boishakh.jpg"
             class="gallery-card"
-            data-gallery
-            data-title="Pohela Boishakh celebration (bangla year)">
+            data-gallery="school-gallery"
+            aria-label="Open Pohela Boishakh photo">
+
 
             <img
               src="images/pohela boishakh.jpg"
-              alt="Benchmark International School activities"
+              alt="Pohela Boishakh celebration"
               loading="lazy">
 
 
             <div class="gallery-overlay">
 
+
               <strong>
-                Pohela Boishakh celebration (bangla year)
+                Pohela Boishakh celebration (Bangla Year)
               </strong>
+
 
               <span class="gallery-arrow">
                 ↗
               </span>
 
+
             </div>
+
 
           </a>
 
@@ -2183,26 +2756,31 @@
           <a
             href="images/21 Feb.jpg"
             class="gallery-card"
-            data-gallery
-            data-title="Independence Day Drawing Competition by Faber Castle">
+            data-gallery="school-gallery"
+            aria-label="Open drawing competition photo">
+
 
             <img
               src="images/21 Feb.jpg"
-              alt="Benchmark International School events"
+              alt="Independence Day Drawing Competition"
               loading="lazy">
 
 
             <div class="gallery-overlay">
 
+
               <strong>
                 Independence Day Drawing Competition by Faber Castle
               </strong>
+
 
               <span class="gallery-arrow">
                 ↗
               </span>
 
+
             </div>
+
 
           </a>
 
@@ -2212,26 +2790,31 @@
           <a
             href="images/assembly.jpg"
             class="gallery-card"
-            data-gallery
-            data-title="Morning Assembly (Dattapara Campus)">
+            data-gallery="school-gallery"
+            aria-label="Open Morning Assembly photo">
+
 
             <img
               src="images/assembly.jpg"
-              alt="Benchmark International School learning environment"
+              alt="Morning Assembly at Dattapara Campus"
               loading="lazy">
 
 
             <div class="gallery-overlay">
 
+
               <strong>
                 Morning Assembly (Dattapara Campus)
               </strong>
+
 
               <span class="gallery-arrow">
                 ↗
               </span>
 
+
             </div>
+
 
           </a>
 
@@ -2241,26 +2824,31 @@
           <a
             href="images/PTM.jpg"
             class="gallery-card"
-            data-gallery
-            data-title="Parent-Teacher Meeting (Dattapara Campus)">
+            data-gallery="school-gallery"
+            aria-label="Open Parent Teacher Meeting photo">
+
 
             <img
               src="images/PTM.jpg"
-              alt="Benchmark International School community"
+              alt="Parent Teacher Meeting"
               loading="lazy">
 
 
             <div class="gallery-overlay">
 
+
               <strong>
-                Parent-Teacher Meeting (PTM) 
+                Parent-Teacher Meeting (Dattapara Campus)
               </strong>
+
 
               <span class="gallery-arrow">
                 ↗
               </span>
 
+
             </div>
+
 
           </a>
 
@@ -2270,26 +2858,31 @@
           <a
             href="images/marks alrounder2.jpg"
             class="gallery-card"
-            data-gallery
-            data-title="Marks Allrounder Award Ceremony">
+            data-gallery="school-gallery"
+            aria-label="Open Marks Allrounder Award Ceremony photo">
+
 
             <img
               src="images/marks alrounder2.jpg"
-              alt="Benchmark International School community"
+              alt="Marks Allrounder Award Ceremony"
               loading="lazy">
 
 
             <div class="gallery-overlay">
 
+
               <strong>
                 Marks Allrounder Award Ceremony
               </strong>
+
 
               <span class="gallery-arrow">
                 ↗
               </span>
 
+
             </div>
+
 
           </a>
 
@@ -2301,6 +2894,7 @@
 
         <div class="gallery-view-more">
 
+
           <a href="gallery.html">
 
             View More Photos
@@ -2311,6 +2905,7 @@
 
           </a>
 
+
         </div>
 
 
@@ -2320,6 +2915,44 @@
 
 
   </main>
+
+
+  <!-- =====================================================
+       IMAGE LIGHTBOX
+  ===================================================== -->
+
+  <div
+    class="lightbox"
+    id="lightbox"
+    aria-hidden="true">
+
+
+    <button
+      class="lightbox-close"
+      id="lightboxClose"
+      aria-label="Close image">
+
+      ×
+
+    </button>
+
+
+    <div
+      class="lightbox-content"
+      id="lightboxContent">
+
+
+      <img
+        src=""
+        alt=""
+        class="lightbox-image"
+        id="lightboxImage">
+
+
+    </div>
+
+
+  </div>
 
 
   <!-- =====================================================
@@ -2336,7 +2969,9 @@
 
       <div>
 
+
         <div class="footer-brand">
+
 
           <img
             src="images/lol-removebg-preview-removebg-preview.png"
@@ -2344,6 +2979,7 @@
 
 
           <div>
+
 
             <h2>
               Benchmark International School
@@ -2354,9 +2990,12 @@
               Building knowledge, character, and a brighter future.
             </p>
 
+
           </div>
 
+
         </div>
+
 
       </div>
 
@@ -2364,6 +3003,7 @@
       <!-- LINKS -->
 
       <div class="footer-column">
+
 
         <h3>
           Quick Links
@@ -2399,6 +3039,7 @@
           Notice Board
         </a>
 
+
       </div>
 
 
@@ -2406,12 +3047,14 @@
 
       <div class="footer-column">
 
+
         <h3>
           Our Branches
         </h3>
 
 
         <div class="branch">
+
 
           <h4>
             Auchpara Campus
@@ -2432,10 +3075,12 @@
 
           </a>
 
+
         </div>
 
 
         <div class="branch">
+
 
           <h4>
             Dattapara Campus
@@ -2456,7 +3101,9 @@
 
           </a>
 
+
         </div>
+
 
       </div>
 
@@ -2464,6 +3111,7 @@
       <!-- CONTACT -->
 
       <div class="footer-column">
+
 
         <h3>
           Contact Us
@@ -2476,8 +3124,11 @@
 
 
         <a href="contact.html">
+
           Visit Contact &amp; Campus Maps →
+
         </a>
+
 
       </div>
 
@@ -2489,15 +3140,21 @@
 
     <div class="footer-bottom">
 
+
       <div class="container footer-bottom-inner">
 
+
         <p>
+
           ©
+
           <span id="footerYear">
             2026
           </span>
+
           Benchmark International School.
           All rights reserved.
+
         </p>
 
 
@@ -2505,7 +3162,9 @@
           Learn · Grow · Lead
         </p>
 
+
       </div>
+
 
     </div>
 
@@ -2514,47 +3173,11 @@
 
 
   <!-- =====================================================
-       GALLERY LIGHTBOX
-  ===================================================== -->
-
-  <div
-    class="gallery-lightbox"
-    id="galleryLightbox"
-    aria-hidden="true">
-
-
-    <button
-      class="lightbox-close"
-      id="lightboxClose"
-      type="button"
-      aria-label="Close image">
-
-      ×
-
-    </button>
-
-
-    <img
-      class="lightbox-image"
-      id="lightboxImage"
-      src=""
-      alt="">
-
-
-    <div
-      class="lightbox-caption"
-      id="lightboxCaption">
-    </div>
-
-
-  </div>
-
-
-  <!-- =====================================================
        JAVASCRIPT
   ===================================================== -->
 
   <script>
+
 
     /* =====================================================
        MOBILE MENU
@@ -2563,40 +3186,54 @@
     const menuButton =
       document.getElementById("menuButton");
 
+
     const navigation =
       document.getElementById("navigation");
 
 
-    menuButton.addEventListener("click", function () {
-
-      const isOpen =
-        navigation.classList.toggle("show");
-
-
-      menuButton.setAttribute(
-        "aria-expanded",
-        isOpen
-      );
-
-    });
+    menuButton.addEventListener(
+      "click",
+      function () {
 
 
-    /* Close mobile menu after clicking a link */
+        const isOpen =
+          navigation.classList.toggle("show");
+
+
+        menuButton.setAttribute(
+          "aria-expanded",
+          isOpen
+        );
+
+
+      }
+    );
+
+
+    /* Close mobile menu */
 
     document
       .querySelectorAll(".navigation a")
       .forEach(function (link) {
 
-        link.addEventListener("click", function () {
 
-          navigation.classList.remove("show");
+        link.addEventListener(
+          "click",
+          function () {
 
-          menuButton.setAttribute(
-            "aria-expanded",
-            "false"
-          );
 
-        });
+            navigation.classList.remove("show");
+
+
+            menuButton.setAttribute(
+              "aria-expanded",
+              "false"
+            );
+
+
+          }
+        );
+
 
       });
 
@@ -2605,72 +3242,98 @@
        GALLERY LIGHTBOX
     ===================================================== */
 
-    const galleryCards =
-      document.querySelectorAll("[data-gallery]");
-
     const lightbox =
-      document.getElementById("galleryLightbox");
+      document.getElementById("lightbox");
+
 
     const lightboxImage =
       document.getElementById("lightboxImage");
 
-    const lightboxCaption =
-      document.getElementById("lightboxCaption");
 
     const lightboxClose =
       document.getElementById("lightboxClose");
 
 
-    /* OPEN IMAGE */
+    const lightboxContent =
+      document.getElementById("lightboxContent");
+
+
+    const galleryCards =
+      document.querySelectorAll(
+        ".gallery-card[data-gallery]"
+      );
+
+
+    let scale = 1;
+
+    let translateX = 0;
+
+    let translateY = 0;
+
+    let startX = 0;
+
+    let startY = 0;
+
+    let isDragging = false;
+
+    let lastDistance = 0;
+
+
+    /* Open */
 
     galleryCards.forEach(function (card) {
 
-      card.addEventListener("click", function (event) {
 
-        event.preventDefault();
-
-        const imageURL =
-          card.getAttribute("href");
-
-        const imageTitle =
-          card.getAttribute("data-title");
+      card.addEventListener(
+        "click",
+        function (event) {
 
 
-        lightboxImage.src =
-          imageURL;
-
-        lightboxImage.alt =
-          imageTitle;
-
-        lightboxCaption.textContent =
-          imageTitle;
+          event.preventDefault();
 
 
-        lightbox.classList.add("show");
-
-        lightbox.setAttribute(
-          "aria-hidden",
-          "false"
-        );
+          const image =
+            card.querySelector("img");
 
 
-        /* Prevent page scrolling */
+          lightboxImage.src =
+            card.getAttribute("href");
 
-        document.body.style.overflow =
-          "hidden";
 
-      });
+          lightboxImage.alt =
+            image ? image.alt : "";
+
+
+          resetZoom();
+
+
+          lightbox.classList.add("show");
+
+
+          lightbox.setAttribute(
+            "aria-hidden",
+            "false"
+          );
+
+
+          document.body.style.overflow =
+            "hidden";
+
+
+        }
+      );
+
 
     });
 
 
-    /* =====================================================
-       CLOSE LIGHTBOX
-    ===================================================== */
+    /* Close function */
 
     function closeLightbox() {
 
+
       lightbox.classList.remove("show");
+
 
       lightbox.setAttribute(
         "aria-hidden",
@@ -2678,48 +3341,74 @@
       );
 
 
+      document.body.style.overflow =
+        "";
+
+
       setTimeout(function () {
 
-        lightboxImage.src = "";
+
+        if (
+          !lightbox.classList.contains("show")
+        ) {
+
+          lightboxImage.src = "";
+
+        }
+
 
       }, 250);
 
 
-      document.body.style.overflow =
-        "";
-
     }
 
 
-    /* CLOSE BUTTON */
+    /* Close button */
 
     lightboxClose.addEventListener(
       "click",
-      closeLightbox
-    );
-
-
-    /* CLICK OUTSIDE IMAGE */
-
-    lightbox.addEventListener(
-      "click",
       function (event) {
 
-        if (event.target === lightbox) {
 
-          closeLightbox();
+        event.stopPropagation();
 
-        }
+
+        closeLightbox();
+
 
       }
     );
 
 
-    /* ESC KEY */
+    /* Click outside image */
+
+    lightbox.addEventListener(
+      "click",
+      function (event) {
+
+
+        if (
+          event.target === lightbox ||
+          event.target === lightboxContent
+        ) {
+
+          closeLightbox();
+
+        }
+
+
+      }
+    );
+
+
+    /* =====================================================
+       ESCAPE KEY
+    ===================================================== */
 
     document.addEventListener(
       "keydown",
       function (event) {
+
 
         if (
           event.key === "Escape" &&
@@ -2730,17 +3419,339 @@
 
         }
 
+
       }
     );
 
 
-    /* Prevent image click from closing */
+    /* =====================================================
+       RESET ZOOM
+    ===================================================== */
+
+    function resetZoom() {
+
+
+      scale = 1;
+
+      translateX = 0;
+
+      translateY = 0;
+
+      isDragging = false;
+
+      lightboxImage.classList.remove(
+        "zoomed"
+      );
+
+
+      updateImageTransform();
+
+    }
+
+
+    /* =====================================================
+       IMAGE TRANSFORM
+    ===================================================== */
+
+    function updateImageTransform() {
+
+
+      lightboxImage.style.transform =
+        `translate(${translateX}px, ${translateY}px) scale(${scale})`;
+
+
+    }
+
+
+    /* =====================================================
+       MOUSE WHEEL ZOOM
+    ===================================================== */
 
     lightboxImage.addEventListener(
-      "click",
+      "wheel",
       function (event) {
 
-        event.stopPropagation();
+
+        event.preventDefault();
+
+
+        const zoomAmount =
+          event.deltaY < 0 ? 0.15 : -0.15;
+
+
+        scale += zoomAmount;
+
+
+        scale =
+          Math.min(
+            Math.max(scale, 1),
+            5
+          );
+
+
+        if (scale === 1) {
+
+          translateX = 0;
+
+          translateY = 0;
+
+        }
+
+
+        lightboxImage.classList.toggle(
+          "zoomed",
+          scale > 1
+        );
+
+
+        updateImageTransform();
+
+
+      },
+      { passive: false }
+    );
+
+
+    /* =====================================================
+       DOUBLE CLICK ZOOM
+    ===================================================== */
+
+    lightboxImage.addEventListener(
+      "dblclick",
+      function (event) {
+
+
+        event.preventDefault();
+
+
+        if (scale > 1) {
+
+          resetZoom();
+
+        } else {
+
+          scale = 2;
+
+          lightboxImage.classList.add(
+            "zoomed"
+          );
+
+          updateImageTransform();
+
+        }
+
+
+      }
+    );
+
+
+    /* =====================================================
+       MOUSE DRAG WHEN ZOOMED
+    ===================================================== */
+
+    lightboxImage.addEventListener(
+      "mousedown",
+      function (event) {
+
+
+        if (scale <= 1) return;
+
+
+        event.preventDefault();
+
+
+        isDragging = true;
+
+
+        startX =
+          event.clientX - translateX;
+
+
+        startY =
+          event.clientY - translateY;
+
+
+      }
+    );
+
+
+    document.addEventListener(
+      "mousemove",
+      function (event) {
+
+
+        if (!isDragging) return;
+
+
+        translateX =
+          event.clientX - startX;
+
+
+        translateY =
+          event.clientY - startY;
+
+
+        updateImageTransform();
+
+
+      }
+    );
+
+
+    document.addEventListener(
+      "mouseup",
+      function () {
+
+
+        isDragging = false;
+
+
+      }
+    );
+
+
+    /* =====================================================
+       TOUCH / PINCH ZOOM
+    ===================================================== */
+
+    function getTouchDistance(touches) {
+
+
+      const x =
+        touches[0].clientX -
+        touches[1].clientX;
+
+
+      const y =
+        touches[0].clientY -
+        touches[1].clientY;
+
+
+      return Math.sqrt(
+        x * x + y * y
+      );
+
+    }
+
+
+    lightboxImage.addEventListener(
+      "touchstart",
+      function (event) {
+
+
+        if (event.touches.length === 2) {
+
+
+          lastDistance =
+            getTouchDistance(
+              event.touches
+            );
+
+
+        }
+
+
+      },
+      { passive: false }
+    );
+
+
+    lightboxImage.addEventListener(
+      "touchmove",
+      function (event) {
+
+
+        if (
+          event.touches.length === 2
+        ) {
+
+
+          event.preventDefault();
+
+
+          const distance =
+            getTouchDistance(
+              event.touches
+            );
+
+
+          if (lastDistance > 0) {
+
+
+            const difference =
+              distance - lastDistance;
+
+
+            scale +=
+              difference * 0.005;
+
+
+            scale =
+              Math.min(
+                Math.max(scale, 1),
+                5
+              );
+
+
+            if (scale === 1) {
+
+              translateX = 0;
+
+              translateY = 0;
+
+            }
+
+
+            lightboxImage.classList.toggle(
+              "zoomed",
+              scale > 1
+            );
+
+
+            updateImageTransform();
+
+
+          }
+
+
+          lastDistance = distance;
+
+
+        }
+
+
+      },
+      { passive: false }
+    );
+
+
+    lightboxImage.addEventListener(
+      "touchend",
+      function (event) {
+
+
+        if (
+          event.touches.length < 2
+        ) {
+
+          lastDistance = 0;
+
+        }
+
+
+      }
+    );
+
+
+    /* =====================================================
+       PREVENT IMAGE DRAG
+    ===================================================== */
+
+    lightboxImage.addEventListener(
+      "dragstart",
+      function (event) {
+
+        event.preventDefault();
 
       }
     );
@@ -2750,8 +3761,11 @@
        CURRENT YEAR
     ===================================================== */
 
-    document.getElementById("footerYear").textContent =
+    document.getElementById(
+      "footerYear"
+    ).textContent =
       new Date().getFullYear();
+
 
   </script>
 
