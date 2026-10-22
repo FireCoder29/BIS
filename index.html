@@ -806,6 +806,158 @@
       font-size: 0.85rem;
     }
 
+
+
+    /* =========================================
+   NOTICE BOARD - MULTIPLE NOTICES
+========================================= */
+
+    .notice-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .notice-item {
+      display: grid;
+      grid-template-columns: 145px minmax(0, 1fr) 42px;
+      align-items: center;
+      gap: 22px;
+      padding: 23px 25px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: #ffffff;
+      box-shadow: 0 5px 18px rgba(34, 55, 63, 0.035);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .notice-item:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow);
+    }
+
+    .notice-date {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+      color: var(--teal-deep);
+      font-size: 0.85rem;
+      font-weight: 700;
+    }
+
+    .notice-date i {
+      font-size: 1.4rem;
+    }
+
+    .notice-content {
+      min-width: 0;
+    }
+
+    .notice-category {
+      display: inline-block;
+      margin-bottom: 7px;
+      padding: 4px 10px;
+      border-radius: 5px;
+      background: #e5f3ed;
+      color: #64748B;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .notice-category.exam {
+      background: #e8eefb;
+      color: #0D6EFD;
+    }
+
+    .notice-category.holiday {
+      background: #fff1dc;
+      color: #198754;
+    }
+
+    .notice-category.event {
+      background: #fff1dc;
+      color: #6F42C1;
+    }
+
+    .notice-category.tour {
+      background: #fff1dc;
+      color: #20C997;
+    }
+
+    .notice-content h3 {
+      margin: 0 0 7px;
+      font-size: 1.08rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    .notice-content p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.91rem;
+      line-height: 1.7;
+    }
+
+    .notice-link {
+      display: grid;
+      width: 40px;
+      height: 40px;
+      place-items: center;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      color: var(--teal-deep);
+      text-decoration: none;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    .notice-link:hover {
+      background: var(--teal-deep);
+      color: #ffffff;
+    }
+
+    a.notice-item,
+    a.notice-item * {
+      text-decoration: none !important;
+    }
+
+    /* Mobile responsive notices */
+
+    @media (max-width: 600px) {
+      .notice-item {
+        grid-template-columns: minmax(0, 1fr) 36px;
+        gap: 12px;
+        padding: 18px;
+      }
+
+      .notice-date {
+        grid-column: 1 / -1;
+        flex-direction: row;
+        align-items: center;
+        gap: 9px;
+        font-size: 0.82rem;
+      }
+
+      .notice-date i {
+        font-size: 1rem;
+      }
+
+      .notice-content h3 {
+        font-size: 1rem;
+      }
+
+      .notice-content p {
+        font-size: 0.87rem;
+      }
+
+      .notice-link {
+        width: 34px;
+        height: 34px;
+      }
+    }
+
     /* =========================================
        13. FOOTER
     ========================================= */
@@ -1580,7 +1732,7 @@
 
     <!-- NOTICE BOARD -->
 
-    <section class="section" id="notice">
+    <!-- <section class="section" id="notice">
       <div class="container">
 
         <div class="section-head">
@@ -1606,7 +1758,211 @@
         </div>
 
       </div>
+    </section> -->
+
+
+    <!-- NOTICE BOARD -->
+
+    <section class="section" id="notice">
+      <div class="container">
+
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Stay informed</span>
+            <h2>Notice Board</h2>
+            <p>Keep up with the latest school announcements and important dates.</p>
+          </div>
+        </div>
+
+        <div class="notice-list">
+
+          <!-- Notice 1: Admission -->
+          <a class="notice-item" href="notice/Holiday-1.jpg" target="_blank" rel="noopener noreferrer">
+
+            <div class="notice-date">
+              <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+              <time datetime="2026-10-21">03 Aug 2026</time>
+            </div>
+
+            <div class="notice-content">
+              <span class="notice-category holiday">Holiday</span>
+              <h3>School Closure – July Student & Mass Uprising</h3>
+              <p>Click to view the full notice.</p>
+            </div>
+
+            <span class="notice-link" aria-hidden="true">
+              <i class="fas fa-arrow-right"></i>
+            </span>
+
+          </a>
+
+          <!-- Notice 2: Examination -->
+          <a class="notice-item" href="notice/2nd term exam-1.jpg" target="_blank" rel="noopener noreferrer">
+
+            <div class="notice-date">
+              <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+              <time datetime="2026-10-21">04 Aug 2026</time>
+            </div>
+
+            <div class="notice-content">
+              <span class="notice-category exam">Examination</span>
+              <h3>Second Term Exam Schedule & Fee Payment</h3>
+              <p>Click to view the full notice.</p>
+            </div>
+
+            <span class="notice-link" aria-hidden="true">
+              <i class="fas fa-arrow-right"></i>
+            </span>
+
+          </a>
+
+          <!-- Notice 3: Holiday -->
+          <a class="notice-item" href="notice/Event-1.jpg" target="_blank" rel="noopener noreferrer">
+
+            <div class="notice-date">
+              <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+              <time datetime="2026-10-21">06 Aug 2026</time>
+            </div>
+
+            <div class="notice-content">
+              <span class="notice-category event">Event</span>
+              <h3>BIS Public Speaking & Presentation – 2026</h3>
+              <p>Click to view the full notice.</p>
+            </div>
+
+            <span class="notice-link" aria-hidden="true">
+              <i class="fas fa-arrow-right"></i>
+            </span>
+
+          </a>
+
+          <!-- Add more notices by copying one notice-item block -->
+
+          <!-- Notice 4: Holiday -->
+          <a class="notice-item" href="notice/2nd term exam-2.jpg" target="_blank" rel="noopener noreferrer">
+
+            <div class="notice-date">
+              <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+              <time datetime="2026-10-21">08 Aug 2026</time>
+            </div>
+
+            <div class="notice-content">
+              <span class="notice-category exam">Exam Update</span>
+              <h3>Revised Second Term Exam Schedule & Routine</h3>
+              <p>Click to view the full notice.</p>
+            </div>
+
+            <span class="notice-link" aria-hidden="true">
+              <i class="fas fa-arrow-right"></i>
+            </span>
+
+          </a>
+
+          <!-- Notice 5: Holiday -->
+          <a class="notice-item" href="notice/Holiday-2.jpg" target="_blank" rel="noopener noreferrer">
+
+            <div class="notice-date">
+              <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+              <time datetime="2026-10-21">11 Aug 2026</time>
+            </div>
+
+            <div class="notice-content">
+              <span class="notice-category holiday">Holiday</span>
+              <h3>School Closure – Akheri Chahar Shomba</h3>
+              <p>Click to view the full notice.</p>
+            </div>
+
+            <span class="notice-link" aria-hidden="true">
+              <i class="fas fa-arrow-right"></i>
+            </span>
+
+          </a>
+
+          <!-- Notice 6: Holiday -->
+          <a class="notice-item" href="notice/Event-2.jpg" target="_blank" rel="noopener noreferrer">
+
+            <div class="notice-date">
+              <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+              <time datetime="2026-10-21">10 Aug 2026</time>
+            </div>
+
+            <div class="notice-content">
+              <span class="notice-category event">Event</span>
+              <h3>BIS Public Speaking & Presentation – Pre-Selection</h3>
+              <p>Click to view the full notice.</p>
+            </div>
+
+            <span class="notice-link" aria-hidden="true">
+              <i class="fas fa-arrow-right"></i>
+            </span>
+
+          </a>
+
+          <!-- Notice 7: Holiday -->
+          <a class="notice-item" href="notice/2nd term exam-3.jpg" target="_blank" rel="noopener noreferrer">
+
+            <div class="notice-date">
+              <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+              <time datetime="2026-10-21">10 Aug 2026</time>
+            </div>
+
+            <div class="notice-content">
+              <span class="notice-category exam">Examination</span>
+              <h3>Second Term Exam Scripts – Handover & Return</h3>
+              <p>Click to view the full notice.</p>
+            </div>
+
+            <span class="notice-link" aria-hidden="true">
+              <i class="fas fa-arrow-right"></i>
+            </span>
+
+          </a>
+
+          <!-- Notice 8: Holiday -->
+          <a class="notice-item" href="notice/Holiday-3.jpg" target="_blank" rel="noopener noreferrer">
+
+            <div class="notice-date">
+              <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+              <time datetime="2026-10-21">22 Aug 2026</time>
+            </div>
+
+            <div class="notice-content">
+              <span class="notice-category holiday">Holiday</span>
+              <h3>School Closure – Fateha-i-Yazdaham</h3>
+              <p>Click to view the full notice.</p>
+            </div>
+
+            <span class="notice-link" aria-hidden="true">
+              <i class="fas fa-arrow-right"></i>
+            </span>
+
+          </a>
+
+          <!-- Notice 9: Holiday -->
+          <a class="notice-item" href="notice/Tour.jpg" target="_blank" rel="noopener noreferrer">
+
+            <div class="notice-date">
+              <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+              <time datetime="2026-10-21">06 Sep 2026</time>
+            </div>
+
+            <div class="notice-content">
+              <span class="notice-category tour">Study Tour</span>
+              <h3>Study Tour 2026</h3>
+              <p>Click to view the full notice.</p>
+            </div>
+
+            <span class="notice-link" aria-hidden="true">
+              <i class="fas fa-arrow-right"></i>
+            </span>
+
+          </a>
+
+        </div>
+
+      </div>
     </section>
+
 
     <!-- SCHOOL MANAGEMENT -->
 
