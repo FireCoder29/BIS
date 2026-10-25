@@ -1077,6 +1077,33 @@
       font-size: 13px;
     }
 
+    .footer-bottom {
+      position: relative;
+    }
+
+    .footer-credit {
+      position: absolute;
+      right: 0;
+      bottom: 20px;
+      margin: 0;
+      color: #cbd5e1;
+      font-size: 11px;
+      opacity: 0.85;
+    }
+
+    .footer-credit span {
+      color: #ffffff;
+      font-weight: 600;
+    }
+
+    @media (max-width: 600px) {
+      .footer-credit {
+        position: static;
+        margin-top: 8px;
+        text-align: center;
+      }
+    }
+
     /* Search result highlight */
 
     .search-result {
@@ -2097,10 +2124,16 @@
     <!-- Copyright -->
 
     <div class="footer-bottom">
+
       <p>
         &copy; <span id="footer-year"></span>
         Benchmark International School. All rights reserved.
       </p>
+
+      <p class="footer-credit">
+        Made by: <span>Arham Ishtiyaque</span>
+      </p>
+
     </div>
 
   </footer>
