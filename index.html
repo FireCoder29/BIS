@@ -1412,6 +1412,65 @@
       }
     }
 
+    /* Footer contact */
+    .footer-contact {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .footer-label {
+      color: #94a3b8;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .footer-contact a {
+      color: #ffffff;
+      font-size: 14px;
+      text-decoration: none;
+      transition: 0.2s ease;
+    }
+
+    .footer-contact a:hover {
+      color: #2563eb;
+    }
+
+    .separator {
+      color: #64748b;
+    }
+
+    /* Phone Responsive */
+    @media (max-width: 480px) {
+      .footer-contact {
+        gap: 8px 10px;
+        justify-content: flex-start;
+      }
+
+      .footer-label {
+        font-size: 13px;
+      }
+
+      .footer-contact a {
+        color: #438a98;
+        /* Blue */
+        font-size: 13px;
+      }
+
+      .footer-contact .separator {
+        color: #64748b;
+      }
+    }
+
+    /* Very Small Screens */
+    @media (max-width: 360px) {
+      .footer-contact a {
+        color: #438a98;
+        font-size: 12px;
+      }
+    }
+
     /* Small landscape phones */
 
     @media screen and (max-height: 500px) and (orientation: landscape) and (max-width: 950px) {
@@ -1497,7 +1556,7 @@
         <a href="index.html" aria-current="page">Home</a>
         <a href="about.html">About Us</a>
         <a href="admission.html">Admission</a>
-        <a href="contact.html">Contact</a>
+        <a href="contact.html">Location</a>
         <a href="index.html#management">School Management</a>
 
       </nav>
@@ -2071,7 +2130,7 @@
         <a href="admission.html">Admission</a>
         <a href="index.html#management">School Management</a>
         <a href="index.html#notice">Notice Board</a>
-        <a href="contact.html">Contact Us</a>
+        <a href="contact.html">Our Location</a>
 
       </div>
 
@@ -2083,58 +2142,71 @@
 
         <div class="branch">
 
-          <h4>Branch 1</h4>
+          <h4><b>Auchpara Campus</b></h4>
 
           <p>
             S.S. Academy Road, Auchpara, Tongi, Gazipur-1711
           </p>
 
-          <a href="https://www.google.com/maps/dir/23.9377211,90.4004897/Benchmark+International+School+-+Auchpara+Campus,+S.S+Academy+Road,+Tongi+1711/@23.9216063,90.3792322,6770m/data=!3m1!1e3!4m9!4m8!1m1!4e1!1m5!1m1!1s0x3755c59b35736413:0x391d2a1e7ad0b4b4!2m2!1d90.3953036!2d23.9100788?entry=ttu&g_ep=EgoyMDI2MTAwNy4wIKXMDSoASAFQAw%3D%3D"
-            target="_blank" rel="noopener noreferrer">
+          <div class="footer-contact">
+            <span class="footer-label">Contact:</span>
 
-            <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
-            Get Directions
+            <a href="tel:+88 01896 175 013">+88 01896 175 013</a>
 
-          </a>
+            <span class="separator">|</span>
 
-        </div>
+            <a href="tel:+88 01896 175 005">+88 01896 175 005</a>
+          </div>
+          <a href="https://www.google.com/maps/dir/23.9375269,90.4002165/Benchmark+International+School+-+Auchpara+Campus,+S.S+Academy+Road,+Tongi+1711/@23.920585,90.3731031,6770m/data=!3m2!1e3!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x3755c59b35736413:0x391d2a1e7ad0b4b4!2m2!1d90.3953036!2d23.9100788?entry=ttu&g_ep=EgoyMDI2MTAyOC4wIKXMDSoASAFQAw%3D%3D"
+              target="_blank" rel="noopener noreferrer">
 
-        <div class="branch">
+              <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+              Get Directions
 
-          <h4>Branch 2</h4>
+            </a>
 
-          <p>
-            Bonomala Road, BIS Point, Dattapara, Tongi, Gazipur-1712
-          </p>
+          <div class="branch">
 
-          <a href="https://www.google.com/maps/dir/23.9377211,90.4004897/Benchmark+International+School+-+Dattapara+Campus,+BIS+Point,+Bonomala+Rd,+Tongi+1712/@23.9235266,90.379109,6924m/data=!3m1!1e3!4m9!4m8!1m1!4e1!1m5!1m1!1s0x3755c5f7d2605a8b:0xe8723066744c72ca!2m2!1d90.4031693!2d23.9111391?entry=ttu&g_ep=EgoyMDI2MTAwNy4wIKXMDSoASAFQAw%3D%3D"
-            target="_blank" rel="noopener noreferrer">
+            <h4><b>Dattapara Campus</b></h4>
 
-            <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
-            Get Directions
+            <p>
+              Bonomala Road, BIS Point, Dattapara, Tongi, Gazipur-1712
+            </p>
 
-          </a>
+            <div class="footer-contact">
+              <span class="footer-label">Contact:</span>
+
+              <a href="tel:+88 01896 175 006">+88 01896 175 006</a>
+
+              <span class="separator">|</span>
+
+              <a href="tel:+88 01896 175 005">+88 01896 175 005</a>
+            </div>
+
+            <a href="https://www.google.com/maps/dir/23.9377211,90.4004897/Benchmark+International+School+-+Dattapara+Campus,+BIS+Point,+Bonomala+Rd,+Tongi+1712/@23.9235266,90.379109,6924m/data=!3m1!1e3!4m9!4m8!1m1!4e1!1m5!1m1!1s0x3755c5f7d2605a8b:0xe8723066744c72ca!2m2!1d90.4031693!2d23.9111391?entry=ttu&g_ep=EgoyMDI2MTAwNy4wIKXMDSoASAFQAw%3D%3D"
+              target="_blank" rel="noopener noreferrer">
+
+              <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+              Get Directions
+
+            </a>
+
+          </div>
 
         </div>
 
       </div>
 
-    </div>
+      <!-- Copyright -->
 
-    <!-- Copyright -->
+      <div class="footer-bottom">
 
-    <div class="footer-bottom">
+        <p>
+          &copy; <span id="footer-year"></span>
+          Benchmark International School. All rights reserved.
+        </p>
 
-      <p>
-        &copy; <span id="footer-year"></span>
-        Benchmark International School. All rights reserved.
-      </p>
-
-      <p class="footer-credit">
-        Made by: <span>Arham Ishtiyaque</span>
-      </p>
-
-    </div>
+      </div>
 
   </footer>
 

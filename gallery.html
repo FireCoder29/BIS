@@ -477,6 +477,66 @@
       }
     }
 
+    /* Footer contact */
+    .footer-contact {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .footer-label {
+      color: #94a3b8;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .footer-contact a {
+      color: #ffffff;
+      font-size: 14px;
+      text-decoration: none;
+      transition: 0.2s ease;
+    }
+
+    .footer-contact a:hover {
+      color: #2563eb;
+    }
+
+    .separator {
+      color: #64748b;
+    }
+
+    /* Phone Responsive */
+    @media (max-width: 480px) {
+      .footer-contact {
+        gap: 8px 10px;
+        justify-content: flex-start;
+      }
+
+      .footer-label {
+        font-size: 13px;
+      }
+
+      .footer-contact a {
+        color: #438a98;
+        /* Blue */
+        font-size: 13px;
+      }
+
+      .footer-contact .separator {
+        color: #64748b;
+      }
+    }
+
+    /* Very Small Screens */
+    @media (max-width: 360px) {
+      .footer-contact a {
+        color: #438a98;
+        font-size: 12px;
+      }
+    }
+
+
     /* =================================================
        MOBILE
     ================================================= */
@@ -648,7 +708,7 @@
         <a href="about.html">About Us</a>
         <a href="admission.html">Admission</a>
         <a href="gallery.html" class="active">Gallery</a>
-        <a href="contact.html">Contact</a>
+        <a href="contact.html">Location</a>
       </nav>
 
     </div>
@@ -783,7 +843,7 @@
       </div>
 
       <div class="footer-column">
-        <h3>Quick Links</h3>
+        <h3 style="color: #55d6c2">Quick Links</h3>
         <a href="index.html">Home</a>
         <a href="about.html">About Us</a>
         <a href="admission.html">Admission</a>
@@ -792,26 +852,44 @@
       </div>
 
       <div class="footer-column">
-        <h3>Our Branches</h3>
+        <h3 style="color: #55d6c2">Our Branches</h3>
 
         <div class="branch">
           <h4>Auchpara Campus</h4>
           <p>S.S. Academy Road, Auchpara, Tongi, Gazipur-1711</p>
+          <div class="footer-contact">
+            <span class="footer-label">Contact:</span>
+
+            <a href="tel:+88 01896 175 013">+88 01896 175 013</a>
+
+            <span class="separator">|</span>
+
+            <a href="tel:+88 01896 175 005">+88 01896 175 005</a>
+          </div>
         </div>
 
         <div class="branch">
           <h4>Dattapara Campus</h4>
           <p>Bonomala Road, BIS Point, Dattapara, Tongi, Gazipur-1712</p>
         </div>
+        <div class="footer-contact">
+          <span class="footer-label">Contact:</span>
+
+          <a href="tel:+88 01896 175 006">+88 01896 175 006</a>
+
+          <span class="separator">|</span>
+
+          <a href="tel:+88 01896 175 005">+88 01896 175 005</a>
+        </div>
       </div>
 
       <div class="footer-column">
-        <h3>Contact Us</h3>
+        <h3 style="color: #55d6c2">Our Location</h3>
         <p>
           For admission information, campus directions and other
           school enquiries.
         </p>
-        <a href="contact.html">Visit Contact Us →</a>
+        <a href="contact.html">Visit Our Location →</a>
       </div>
 
     </div>
