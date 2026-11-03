@@ -619,6 +619,231 @@
       font-size: 0.9rem;
     }
 
+    /* =====================================
+   PRINCIPAL'S MUSICAL PRESENTATION
+===================================== */
+
+    .principal-music-section {
+      padding: 85px 0;
+      background: #f7f9fa;
+    }
+
+    .music-heading {
+      text-align: center;
+      max-width: 750px;
+      margin: 0 auto 45px;
+    }
+
+    .music-subtitle {
+      display: inline-block;
+      color: #438a98;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      margin-bottom: 12px;
+    }
+
+    .music-heading h2 {
+      color: #25343b;
+      font-family: 'Manrope', sans-serif;
+      font-size: 32px;
+      font-weight: 800;
+      margin-bottom: 15px;
+    }
+
+    .music-heading p {
+      color: #64747b;
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    .music-content {
+      display: grid;
+      grid-template-columns: 1.35fr 1fr;
+      align-items: center;
+      gap: 45px;
+      background: #ffffff;
+      padding: 25px;
+      border-radius: 16px;
+      border: 1px solid #e6edef;
+      box-shadow: 0 12px 35px rgba(37, 52, 59, 0.07);
+    }
+
+    .music-video {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      border-radius: 12px;
+      background: #25343b;
+    }
+
+    .music-thumbnail {
+      display: block;
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .music-thumbnail img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .music-thumbnail:hover img {
+      transform: scale(1.04);
+    }
+
+    .play-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 68px;
+      height: 48px;
+      background: #ff0000;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 25px;
+      transition: 0.3s ease;
+    }
+
+    .music-thumbnail:hover .play-button {
+      background: #cc0000;
+      transform: translate(-50%, -50%) scale(1.12);
+    }
+
+    .music-video iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+
+    .music-info {
+      padding: 15px 20px 15px 0;
+    }
+
+    .music-label {
+      color: #438a98;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+    }
+
+    .music-info h3 {
+      color: #25343b;
+      font-family: 'Manrope', sans-serif;
+      font-size: 25px;
+      font-weight: 800;
+      line-height: 1.4;
+      margin: 15px 0;
+    }
+
+    .music-info p {
+      color: #687980;
+      font-size: 14px;
+      line-height: 1.9;
+      margin-bottom: 25px;
+    }
+
+    .music-youtube-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      background: #25343b;
+      color: #ffffff;
+      text-decoration: none;
+      padding: 12px 20px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 700;
+      transition: all 0.3s ease;
+    }
+
+    .music-youtube-btn:hover {
+      background: #438a98;
+      color: #ffffff;
+      transform: translateY(-2px);
+    }
+
+    .music-youtube-btn i {
+      color: #ff5555;
+      font-size: 17px;
+    }
+
+
+    /* =====================================
+   TABLET RESPONSIVENESS
+===================================== */
+
+    @media (max-width: 991px) {
+
+      .music-content {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+
+      .music-info {
+        padding: 10px 10px 15px;
+      }
+
+    }
+
+
+    /* =====================================
+   MOBILE RESPONSIVENESS
+===================================== */
+
+    @media (max-width: 576px) {
+
+      .principal-music-section {
+        padding: 55px 0;
+      }
+
+      .music-heading {
+        margin-bottom: 30px;
+      }
+
+      .music-heading h2 {
+        font-size: 24px;
+      }
+
+      .music-heading p {
+        font-size: 13px;
+      }
+
+      .music-content {
+        padding: 13px;
+        gap: 18px;
+        border-radius: 12px;
+      }
+
+      .music-video {
+        border-radius: 8px;
+      }
+
+      .music-info {
+        padding: 8px 5px 12px;
+      }
+
+      .music-info h3 {
+        font-size: 21px;
+      }
+
+      .music-info p {
+        font-size: 13px;
+      }
+
+    }
+
     /* =========================================
        9. WHY CHOOSE OUR SCHOOL
     ========================================= */
@@ -885,6 +1110,11 @@
     .notice-category.tour {
       background: #fff1dc;
       color: #20C997;
+    }
+
+    .notice-category.pm {
+      background: #fff1dc;
+      color: #B08D57;
     }
 
     .notice-content h3 {
@@ -1729,6 +1959,59 @@
       </div>
     </section>
 
+    <!-- Principal's Musical Presentation -->
+    <section class="principal-music-section">
+      <div class="container">
+
+        <div class="music-heading">
+          <span class="music-subtitle">A SPECIAL PRESENTATION</span>
+
+          <h2>A Musical Presentation by Our Principal</h2>
+
+          <p>
+            Beyond his dedication to education and leadership,
+            our honorable Principal shares his musical talent
+            with us through this special presentation.
+          </p>
+        </div>
+
+        <div class="music-content">
+
+          <!-- Separate Image with YouTube Play Button -->
+          <div class="music-video">
+            <a href="https://www.youtube.com/watch?v=PojhFNjGnQs" target="_blank" rel="noopener noreferrer"
+              class="music-thumbnail" aria-label="Watch the Principal's musical presentation on YouTube">
+              <img src="images/rupali nodi.png" alt="Principal's Musical Presentation">
+
+              <span class="play-button">
+                <i class="fab fa-youtube"></i>
+              </span>
+            </a>
+          </div>
+
+          <div class="music-info">
+            <span class="music-label">BENCHMARK INTERNATIONAL SCHOOL</span>
+
+            <h3>A Voice Beyond the Classroom</h3>
+
+            <p>
+              A special musical contribution from our honorable
+              Principal, reflecting his passion and creativity
+              beyond the world of education.
+            </p>
+
+            <a href="https://youtu.be/PojhFNjGnQs?si=n8NHyUJwzs8fnAOh" target="_blank" rel="noopener noreferrer"
+              class="music-youtube-btn">
+              <i class="fab fa-youtube"></i>
+              Watch on YouTube
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
     <!-- WHY CHOOSE OUR SCHOOL -->
 
     <section class="section" id="why-us">
@@ -2066,10 +2349,36 @@
 
           </a>
 
+
+
         </div>
+
+        <!-- Notice 11: Holiday -->
+        <a class="notice-item" href="notice/Principal_Messages_English_First.pdf" target="_blank"
+          rel="noopener noreferrer">
+
+          <div class="notice-date">
+            <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+            <time datetime="2026-10-21">31 Oct 2026</time>
+          </div>
+
+          <div class="notice-content">
+            <span class="notice-category pm">Principal's Message</span>
+            <h3>A Message from the Principal – BIS Public Speaking & Presentation-2026</h3>
+            <p>Click to view the full notice.</p>
+          </div>
+
+          <span class="notice-link" aria-hidden="true">
+            <i class="fas fa-arrow-right"></i>
+          </span>
+
+        </a>
+
+      </div>
 
       </div>
     </section>
+
 
 
     <!-- SCHOOL MANAGEMENT -->
