@@ -1188,6 +1188,109 @@
       }
     }
 
+    /* =====================================
+   NOTICE BOARD - SMOOTH SHOW / HIDE
+===================================== */
+
+
+    /* NOTICE LIST */
+
+    .notice-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .notice-list>.notice-item {
+      margin-bottom: 16px;
+    }
+
+    /* Hide extra notices */
+
+    .notice-list>.notice-item:nth-child(n+6) {
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      padding-top: 0;
+      padding-bottom: 0;
+      margin-bottom: 0;
+      border-width: 0;
+      transform: translateY(-8px);
+      pointer-events: none;
+
+      transition:
+        max-height 0.45s ease,
+        opacity 0.3s ease,
+        padding 0.4s ease,
+        margin 0.4s ease,
+        transform 0.35s ease;
+    }
+
+    /* Expand extra notices */
+
+    .notice-list.show-all>.notice-item:nth-child(n+6) {
+      max-height: 250px;
+      opacity: 1;
+      padding-top: 23px;
+      padding-bottom: 23px;
+      margin-bottom: 16px;
+      border-width: 1px;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+
+    /* Toggle button */
+
+    .notice-toggle-wrapper {
+      display: flex;
+      justify-content: center;
+      margin-top: 8px;
+    }
+
+
+    /* Respect reduced-motion preferences */
+
+    @media (prefers-reduced-motion: reduce) {
+      .notice-list>.notice-item {
+        transition: none !important;
+      }
+    }
+
+    .notice-toggle-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 24px;
+      background: var(--ink);
+      color: white;
+      border: 1px solid var(--ink);
+      border-radius: 8px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .notice-toggle-btn:hover {
+      background: var(--teal-deep);
+      border-color: var(--teal-deep);
+    }
+
+    .notice-toggle-btn i {
+      transition: transform 0.3s ease;
+    }
+
+    .notice-toggle-btn.active i {
+      transform: rotate(180deg);
+    }
+
+    #notice {
+      overflow-anchor: none;
+    }
+
+    .notice-list {
+      overflow-anchor: none;
+    }
+
     /* =========================================
        13. FOOTER
     ========================================= */
@@ -2349,31 +2452,36 @@
 
           </a>
 
+          <!-- Notice 11: Holiday -->
+          <a class="notice-item" href="notice/Principal_Messages_English_First.pdf" target="_blank"
+            rel="noopener noreferrer">
 
+            <div class="notice-date">
+              <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+              <time datetime="2026-10-21">31 Oct 2026</time>
+            </div>
+
+            <div class="notice-content">
+              <span class="notice-category pm">Principal's Message</span>
+              <h3>A Message from the Principal – BIS Public Speaking & Presentation-2026</h3>
+              <p>Click to view the full notice.</p>
+            </div>
+
+            <span class="notice-link" aria-hidden="true">
+              <i class="fas fa-arrow-right"></i>
+            </span>
+
+          </a>
 
         </div>
+        <div class="notice-toggle-wrapper">
+          <button class="notice-toggle-btn" id="noticeToggle" type="button" aria-expanded="false">
 
-        <!-- Notice 11: Holiday -->
-        <a class="notice-item" href="notice/Principal_Messages_English_First.pdf" target="_blank"
-          rel="noopener noreferrer">
+            <span>See More Notices</span>
+            <i class="fas fa-chevron-down"></i>
 
-          <div class="notice-date">
-            <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-            <time datetime="2026-10-21">31 Oct 2026</time>
-          </div>
-
-          <div class="notice-content">
-            <span class="notice-category pm">Principal's Message</span>
-            <h3>A Message from the Principal – BIS Public Speaking & Presentation-2026</h3>
-            <p>Click to view the full notice.</p>
-          </div>
-
-          <span class="notice-link" aria-hidden="true">
-            <i class="fas fa-arrow-right"></i>
-          </span>
-
-        </a>
-
+          </button>
+        </div>
       </div>
 
       </div>
@@ -2655,6 +2763,46 @@
 
 
   </script>
+
+
+  <script>
+    // Smooth Show More / Hide Notices
+
+    document.addEventListener("DOMContentLoaded", function () {
+
+      const noticeList = document.querySelector(".notice-list");
+      const noticeToggle = document.getElementById("noticeToggle");
+
+      if (!noticeList || !noticeToggle) return;
+
+      const extraNotices = noticeList.querySelectorAll(
+        ".notice-item:nth-child(n+6)"
+      );
+
+      if (extraNotices.length === 0) {
+        noticeToggle.style.display = "none";
+        return;
+      }
+
+      noticeToggle.addEventListener("click", function () {
+
+        const isExpanded = noticeList.classList.toggle("show-all");
+
+        noticeToggle.classList.toggle("active", isExpanded);
+
+        noticeToggle.setAttribute("aria-expanded", isExpanded);
+
+        noticeToggle.querySelector("span").textContent =
+          isExpanded ? "Hide Notices" : "See More Notices";
+
+        noticeToggle.querySelector("i").className =
+          isExpanded ? "fas fa-chevron-up" : "fas fa-chevron-down";
+
+      });
+
+    });
+  </script>
+
 
 </body>
 
